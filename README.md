@@ -24,9 +24,9 @@ Nasagh is a niche e-commerce website specializing in premium, artisanal Arabian 
 
 ## 🌐 Live Websites
 
-- **GitHub Pages**: https://celebrated-raindrop-bd22bb.netlify.app/
-- **Free Hosting**: [Your hosting URL]
-- **GitHub Repository**: [Your Repository URL]
+- **GitHub Pages**: 
+- **Free Hosting**: https://celebrated-raindrop-bd22bb.netlify.app/
+- **GitHub Repository**: https://github.com/ElyasAQ/comp3700-project
 
 ## 📁 Project Structure
 

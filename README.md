@@ -219,8 +219,8 @@ Choose one of these platforms:
 
 ## 📧 Contact Information
 
-**Email**: info@nasagh.om  
-**Phone**: +968 1234 5678  
+**Email**: s150229@student.squ.edu.om  
+**Phone**: +968 71183928  
 **Address**: Muscat, Sultanate of Oman
 
 ## 📄 License

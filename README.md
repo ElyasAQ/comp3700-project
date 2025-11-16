@@ -33,18 +33,22 @@ Nasagh is a niche e-commerce website specializing in premium, artisanal Arabian 
 ```
 nasagh-website/
 │
-├── index.html              # Home page
-├── shop.html               # Products listing page
-├── product-detail.html     # Product details page
-├── about.html              # About Us page (with email link)
-├── contact.html            # Contact Us page (with form)
-├── account.html            # User account page
-├── newsletter.html         # Newsletter subscription page
-├── styles.css              # External CSS stylesheet
-├── images/                 # Image directory
+├── index.html           # Home page (featured banner + highlighted perfumes)
+├── shop.html            # Products listing page (perfume catalog)
+├── product.html         # Product details page (single perfume)
+├── about.html           # About Us page (brand story + email link)
+├── contact.html         # Contact Us page (contact form)
+├── account.html         # User account page (login / register / orders)
+├── cart.html            # Cart & checkout page
+│
+├── css/
+│   ├── style.css        # Main external CSS stylesheet (layout + theme)
+│   └── responsive.css   # Media queries for mobile/tablet/desktop
+│
+├── images/              # Images directory (logo, perfumes, backgrounds)
 │   └── logo.png
-├── README.md              # This file
-
+│
+└── README.md            # This file
 ```
 
 ## ✨ Key Features Implemented

@@ -1,0 +1,752 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nasagh - Luxury Arabian Oud & Perfumes | نسغ</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Cormorant+Garamond:wght@300;400;500;600&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <style>
+        /* Luxury Home Page Styling */
+        .hero-banner {
+            position: relative;
+            height: 100vh;
+            background: linear-gradient(135deg, rgba(93, 78, 55, 0.95) 0%, rgba(139, 115, 85, 0.9) 50%, rgba(212, 165, 116, 0.85) 100%),
+                        url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 600"><defs><pattern id="pattern" x="0" y="0" width="40" height="40" patternUnits="userSpaceOnUse"><circle cx="20" cy="20" r="1" fill="rgba(255,255,255,0.1)"/></pattern></defs><rect fill="url(%23pattern)" width="1200" height="600"/></svg>');
+            background-size: cover;
+            background-position: center;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: white;
+            overflow: hidden;
+        }
+
+        .hero-banner::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: radial-gradient(circle at 30% 50%, rgba(212, 165, 116, 0.2) 0%, transparent 50%);
+            animation: shimmer 8s infinite;
+        }
+
+        @keyframes shimmer {
+            0%, 100% { opacity: 0.3; }
+            50% { opacity: 0.6; }
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 2;
+            max-width: 900px;
+            padding: 40px;
+            animation: fadeInUp 1.2s ease-out;
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .hero-logo {
+            font-family: 'Playfair Display', serif;
+            font-size: 5em;
+            font-weight: 700;
+            margin-bottom: 10px;
+            text-shadow: 0 4px 15px rgba(0,0,0,0.4);
+            letter-spacing: 3px;
+        }
+
+        .hero-arabic {
+            font-family: 'Scheherazade New', serif;
+            font-size: 3em;
+            margin-bottom: 25px;
+            opacity: 0.95;
+        }
+
+        .hero-tagline {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 1.6em;
+            font-weight: 300;
+            letter-spacing: 2px;
+            margin-bottom: 15px;
+            line-height: 1.8;
+            opacity: 0.9;
+        }
+
+        .hero-description {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 1.1em;
+            font-weight: 300;
+            line-height: 1.8;
+            margin-bottom: 40px;
+            opacity: 0.85;
+            max-width: 700px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .cta-buttons {
+            display: flex;
+            gap: 20px;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        .cta-primary {
+            background: linear-gradient(135deg, #D4A574 0%, #B8935F 100%);
+            color: white;
+            padding: 18px 45px;
+            text-decoration: none;
+            border-radius: 50px;
+            font-size: 1.1em;
+            font-weight: 500;
+            font-family: 'Montserrat', sans-serif;
+            letter-spacing: 1px;
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+            box-shadow: 0 8px 25px rgba(212, 165, 116, 0.4);
+            border: 2px solid transparent;
+        }
+
+        .cta-primary:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 15px 35px rgba(212, 165, 116, 0.5);
+            background: linear-gradient(135deg, #E5B885 0%, #C9A470 100%);
+        }
+
+        .cta-secondary {
+            background: transparent;
+            color: white;
+            padding: 18px 45px;
+            text-decoration: none;
+            border-radius: 50px;
+            font-size: 1.1em;
+            font-weight: 500;
+            font-family: 'Montserrat', sans-serif;
+            letter-spacing: 1px;
+            border: 2px solid rgba(255,255,255,0.5);
+            transition: all 0.4s;
+        }
+
+        .cta-secondary:hover {
+            background: rgba(255,255,255,0.1);
+            border-color: white;
+            transform: translateY(-3px);
+        }
+
+        /* Luxury Collection Section */
+        .luxury-collection {
+            padding: 120px 20px;
+            background: linear-gradient(180deg, #FDFBF7 0%, #F8F4ED 100%);
+            position: relative;
+        }
+
+        .luxury-collection::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 1px;
+            background: linear-gradient(90deg, transparent, #D4A574, transparent);
+        }
+
+        .section-header {
+            text-align: center;
+            margin-bottom: 80px;
+        }
+
+        .section-subtitle {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 0.9em;
+            text-transform: uppercase;
+            letter-spacing: 3px;
+            color: #D4A574;
+            margin-bottom: 15px;
+            font-weight: 500;
+        }
+
+        .section-title {
+            font-family: 'Playfair Display', serif;
+            font-size: 3.5em;
+            color: #5D4E37;
+            margin-bottom: 20px;
+            font-weight: 600;
+        }
+
+        .section-description {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 1.3em;
+            color: #7A6A54;
+            max-width: 700px;
+            margin: 0 auto;
+            line-height: 1.8;
+        }
+
+        .products-showcase {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 40px;
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+
+        .product-card-luxury {
+            background: white;
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: 0 10px 40px rgba(93, 78, 55, 0.1);
+            transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+            position: relative;
+            cursor: pointer;
+        }
+
+        .product-card-luxury::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: linear-gradient(135deg, rgba(212, 165, 116, 0.1) 0%, transparent 100%);
+            opacity: 0;
+            transition: opacity 0.5s;
+        }
+
+        .product-card-luxury:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 60px rgba(93, 78, 55, 0.2);
+        }
+
+        .product-card-luxury:hover::before {
+            opacity: 1;
+        }
+
+        .product-image-luxury {
+            width: 100%;
+            height: 400px;
+            background: linear-gradient(135deg, #5D4E37 0%, #8B7355 100%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 6em;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .product-image-luxury::after {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            width: 300%;
+            height: 300%;
+            background: radial-gradient(circle, rgba(255,255,255,0.1) 0%, transparent 70%);
+            transform: translate(-50%, -50%);
+            animation: pulse 3s infinite;
+        }
+
+        @keyframes pulse {
+            0%, 100% { transform: translate(-50%, -50%) scale(1); }
+            50% { transform: translate(-50%, -50%) scale(1.1); }
+        }
+
+        .product-badge {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            background: linear-gradient(135deg, #D4A574 0%, #B8935F 100%);
+            color: white;
+            padding: 8px 20px;
+            border-radius: 25px;
+            font-size: 0.85em;
+            font-weight: 600;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            box-shadow: 0 4px 15px rgba(212, 165, 116, 0.4);
+        }
+
+        .product-info-luxury {
+            padding: 35px;
+        }
+
+        .product-category {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 0.85em;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            color: #D4A574;
+            margin-bottom: 12px;
+            font-weight: 500;
+        }
+
+        .product-name-luxury {
+            font-family: 'Playfair Display', serif;
+            font-size: 2em;
+            color: #5D4E37;
+            margin-bottom: 15px;
+            font-weight: 600;
+        }
+
+        .product-desc-luxury {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 1.1em;
+            color: #7A6A54;
+            line-height: 1.7;
+            margin-bottom: 20px;
+        }
+
+        .product-notes {
+            display: flex;
+            gap: 8px;
+            flex-wrap: wrap;
+            margin-bottom: 20px;
+        }
+
+        .note-tag {
+            background: #F8F4ED;
+            color: #8B7355;
+            padding: 6px 15px;
+            border-radius: 20px;
+            font-size: 0.85em;
+            font-family: 'Montserrat', sans-serif;
+        }
+
+        .product-price-luxury {
+            font-family: 'Playfair Display', serif;
+            font-size: 2.2em;
+            color: #5D4E37;
+            font-weight: 600;
+            margin-bottom: 25px;
+        }
+
+        .product-price-luxury .currency {
+            font-size: 0.6em;
+            opacity: 0.7;
+            margin-left: 5px;
+        }
+
+        .product-actions {
+            display: flex;
+            gap: 15px;
+        }
+
+        .btn-view-luxury {
+            flex: 1;
+            background: linear-gradient(135deg, #5D4E37 0%, #8B7355 100%);
+            color: white;
+            padding: 15px 30px;
+            text-decoration: none;
+            border-radius: 50px;
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 500;
+            text-align: center;
+            transition: all 0.4s;
+            letter-spacing: 1px;
+        }
+
+        .btn-view-luxury:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 25px rgba(93, 78, 55, 0.3);
+        }
+
+        /* Experience Section */
+        .experience-section {
+            background: linear-gradient(135deg, #5D4E37 0%, #8B7355 50%, #5D4E37 100%);
+            color: white;
+            padding: 120px 20px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .experience-section::before {
+            content: '✦';
+            position: absolute;
+            font-size: 20em;
+            opacity: 0.05;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+
+        .experience-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 50px;
+            max-width: 1400px;
+            margin: 60px auto 0;
+        }
+
+        .experience-card {
+            text-align: center;
+            padding: 40px 30px;
+            background: rgba(255,255,255,0.05);
+            border-radius: 20px;
+            border: 1px solid rgba(255,255,255,0.1);
+            transition: all 0.4s;
+        }
+
+        .experience-card:hover {
+            background: rgba(255,255,255,0.1);
+            transform: translateY(-10px);
+        }
+
+        .experience-icon {
+            font-size: 4em;
+            margin-bottom: 25px;
+            display: block;
+        }
+
+        .experience-title {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.6em;
+            margin-bottom: 15px;
+            font-weight: 600;
+        }
+
+        .experience-text {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 1.1em;
+            line-height: 1.8;
+            opacity: 0.9;
+        }
+
+        /* Testimonials */
+        .testimonials-section {
+            padding: 120px 20px;
+            background: #FDFBF7;
+        }
+
+        .testimonial-slider {
+            max-width: 1000px;
+            margin: 60px auto 0;
+        }
+
+        .testimonial-card {
+            background: white;
+            padding: 50px;
+            border-radius: 20px;
+            box-shadow: 0 10px 40px rgba(93, 78, 55, 0.08);
+            text-align: center;
+        }
+
+        .testimonial-stars {
+            color: #D4A574;
+            font-size: 1.8em;
+            margin-bottom: 25px;
+        }
+
+        .testimonial-text {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 1.4em;
+            line-height: 1.9;
+            color: #5D4E37;
+            font-style: italic;
+            margin-bottom: 30px;
+        }
+
+        .testimonial-author {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.2em;
+            color: #8B7355;
+            font-weight: 600;
+        }
+
+        .testimonial-location {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 0.9em;
+            color: #B8935F;
+            margin-top: 5px;
+        }
+
+        /* Newsletter CTA */
+        .newsletter-cta {
+            background: linear-gradient(135deg, #D4A574 0%, #B8935F 100%);
+            padding: 100px 20px;
+            text-align: center;
+            color: white;
+        }
+
+        .newsletter-cta h2 {
+            font-family: 'Playfair Display', serif;
+            font-size: 3em;
+            margin-bottom: 20px;
+            font-weight: 600;
+        }
+
+        .newsletter-cta p {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 1.3em;
+            margin-bottom: 40px;
+            opacity: 0.95;
+        }
+
+        .newsletter-cta .cta-primary {
+            background: white;
+            color: #5D4E37;
+        }
+
+        .newsletter-cta .cta-primary:hover {
+            background: #FDFBF7;
+        }
+    </style>
+</head>
+<body>
+    <!-- Luxury Header -->
+    <header>
+        <div class="container">
+            <div class="logo">
+                <img src="images/oud1 - Copy-Recovered.png" alt="Nasagh Logo" class="header-logo">
+                <p class="logo-tagline">Timeless Essence of Oud</p>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="shop.html">Collection</a></li>
+                    <li><a href="about.html">Our Story</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                    <li><a href="account.html">Account</a></li>
+                    <li><a href="cart.html">Cart</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Banner -->
+    <section class="hero-banner">
+        <div class="hero-content">
+            <h1 class="hero-logo">NASAGH</h1>
+            <div class="hero-arabic">نسغ عصارة العود الخالدة</div>
+            <p class="hero-tagline">The Timeless Essence of Arabian Oud</p>
+            <p class="hero-description">
+                Discover the finest artisanal fragrances where ancient traditions meet modern luxury. 
+                Each scent tells a story of heritage, craftsmanship, and unparalleled quality.
+            </p>
+            <div class="cta-buttons">
+                <a href="shop.html" class="cta-primary">
+                    Explore Collection <span>→</span>
+                </a>
+                <a href="about.html" class="cta-secondary">Our Heritage</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Luxury Collection -->
+    <section class="luxury-collection">
+        <div class="section-header">
+            <p class="section-subtitle">Signature Collection</p>
+            <h2 class="section-title">Masterfully Crafted Fragrances</h2>
+            <p class="section-description">
+                Each fragrance in our collection is a testament to the art of perfumery, 
+                blending rare ingredients with centuries-old techniques.
+            </p>
+        </div>
+
+        <div class="products-showcase">
+            <!-- Product 1 -->
+            <div class="product-card-luxury">
+                <div class="product-image-luxury">
+                    <img src="images/3145891074604_bottle.jpg.jpeg" alt="Desert Rose perfume">
+
+                </div>
+                <div class="product-info-luxury">
+                    <p class="product-category">Signature Oud</p>
+                    <h3 class="product-name-luxury">Midnight Oud</h3>
+                    <p class="product-desc-luxury">
+                        A captivating journey through the Arabian night, featuring rich agarwood 
+                        and warm amber with whispers of precious spices.
+                    </p>
+                    <div class="product-notes">
+                        <span class="note-tag">Woody</span>
+                        <span class="note-tag">Amber</span>
+                        <span class="note-tag">Spicy</span>
+                    </div>
+                    <div class="product-price-luxury">
+                        25<span class="currency">OMR</span>
+                    </div>
+                    <div class="product-actions">
+                        <a href="product-detail.html" class="btn-view-luxury">Discover More</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Product 2 -->
+            <div class="product-card-luxury">
+                <div class="product-image-luxury" style="background: linear-gradient(135deg, #D4A574 0%, #F5E6D3 100%);">
+                    <img src="images/HERMES_TERRE_D_PURE_PERFUME_200ML_BB.webp.jpeg" alt="Desert Rose perfume">
+                </div>
+                <div class="product-info-luxury">
+                    <p class="product-category">Floral Fusion</p>
+                    <h3 class="product-name-luxury">Desert Rose</h3>
+                    <p class="product-desc-luxury">
+                        An elegant blend of Damascus rose and jasmine, touched with 
+                        subtle oriental notes that dance on the skin.
+                    </p>
+                    <div class="product-notes">
+                        <span class="note-tag">Floral</span>
+                        <span class="note-tag">Rose</span>
+                        <span class="note-tag">Jasmine</span>
+                    </div>
+                    <div class="product-price-luxury">
+                        22<span class="currency">OMR</span>
+                    </div>
+                    <div class="product-actions">
+                        <a href="product-detail.html" class="btn-view-luxury">Discover More</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Product 3 -->
+            <div class="product-card-luxury">
+                <div class="product-image-luxury" style="background: linear-gradient(135deg, #8B7355 0%, #D4A574 100%);">
+                    <img src="images/product_image_1182_1647844138.jpg.jpeg" alt="Desert Rose perfume">
+                </div>
+                <div class="product-info-luxury">
+                    <p class="product-category">Royal Collection</p>
+                    <h3 class="product-name-luxury">Royal Amber</h3>
+                    <p class="product-desc-luxury">
+                        Opulent and timeless, this masterpiece combines pure amber resin 
+                        with sandalwood and precious musk for an unforgettable presence.
+                    </p>
+                    <div class="product-notes">
+                        <span class="note-tag">Amber</span>
+                        <span class="note-tag">Musk</span>
+                        <span class="note-tag">Sandalwood</span>
+                    </div>
+                    <div class="product-price-luxury">
+                        30<span class="currency">OMR</span>
+                    </div>
+                    <div class="product-actions">
+                        <a href="product-detail.html" class="btn-view-luxury">Discover More</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Experience Section -->
+    <section class="experience-section">
+        <div class="section-header">
+            <p class="section-subtitle" style="color: #D4A574;">The Nasagh Experience</p>
+            <h2 class="section-title" style="color: white;">Why Choose Nasagh</h2>
+            <p class="section-description" style="color: rgba(255,255,255,0.9);">
+                We are committed to delivering excellence in every bottle
+            </p>
+        </div>
+
+        <div class="experience-grid">
+            <div class="experience-card">
+                <span class="experience-icon">🌿</span>
+                <h3 class="experience-title">100% Authentic</h3>
+                <p class="experience-text">
+                    Pure, natural ingredients sourced from ethical suppliers 
+                    who respect traditional harvesting methods.
+                </p>
+            </div>
+
+            <div class="experience-card">
+                <span class="experience-icon">🎨</span>
+                <h3 class="experience-title">Artisan Crafted</h3>
+                <p class="experience-text">
+                    Each fragrance is meticulously created by master perfumers 
+                    with decades of expertise.
+                </p>
+            </div>
+
+            <div class="experience-card">
+                <span class="experience-icon">✨</span>
+                <h3 class="experience-title">Luxury Packaging</h3>
+                <p class="experience-text">
+                    Exquisitely designed bottles and presentation that reflect 
+                    the quality within.
+                </p>
+            </div>
+
+            <div class="experience-card">
+                <span class="experience-icon">🚚</span>
+                <h3 class="experience-title">Complimentary Delivery</h3>
+                <p class="experience-text">
+                    Free express shipping on all orders within Oman, 
+                    delivered with care.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials -->
+    <section class="testimonials-section">
+        <div class="section-header">
+            <p class="section-subtitle">What Our Clients Say</p>
+            <h2 class="section-title">Beloved by Connoisseurs</h2>
+        </div>
+
+        <div class="testimonial-slider">
+            <div class="testimonial-card">
+                <div class="testimonial-stars">★★★★★</div>
+                <p class="testimonial-text">
+                    "Midnight Oud has become my signature scent. The quality is exceptional, 
+                    and the longevity is unlike anything I've experienced before. 
+                    Truly a masterpiece of Arabian perfumery."
+                </p>
+                <p class="testimonial-author">Fatima Al-Rashdi</p>
+                <p class="testimonial-location">Muscat, Oman</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Newsletter CTA -->
+    <section class="newsletter-cta">
+        <h2>Join Our Exclusive Circle</h2>
+        <p>Be the first to discover new fragrances and receive special offers</p>
+        <a href="newsletter.html" class="cta-primary">Subscribe Now</a>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3 style="font-family: 'Playfair Display', serif;">نسغ Nasagh</h3>
+                    <p style="font-family: 'Cormorant Garamond', serif;">Timeless Arabian Perfumes</p>
+                    <p style="margin-top: 15px; font-size: 0.9em;">Crafting olfactory excellence since 2022</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Explore</h4>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="shop.html">Collection</a></li>
+                        <li><a href="about.html">Our Story</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                        <li><a href="cart.html">Cart</a></li>
+                        <li><a href="newsletter.html">Newsletter</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                <h4>Connect</h4>
+                    <p>Email: s150229@student.squ.edu.om</p>
+                    <p>Phone: +968 71183928</p>
+                    <p>Muscat, Sultanate of Oman</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p style="font-family: 'Montserrat', sans-serif;">&copy; 2025 Nasagh Inc. All rights reserved. | Crafted by WEB Crafters Team</p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

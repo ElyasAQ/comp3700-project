@@ -171,7 +171,7 @@ nasagh-website/
 
 ## 📝 Form Submission Setup
 
-All forms submit to `https://httpbin.org/get` as per project requirements. The Contact Us form is also configured to send to `info@nasagh.om` using `mailto:`.
+All forms submit to `https://httpbin.org/get` as per project requirements. The Contact Us form is also configured to send to `s150229@student.squ.edu.om` using `mailto:`.
 
 ## 🚀 Deployment Instructions
 

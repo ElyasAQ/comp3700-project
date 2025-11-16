@@ -43,11 +43,11 @@ nasagh-website/
 │
 ├── css/
 │   ├── style.css        # Main external CSS stylesheet (layout + theme)
-│   └── responsive.css   # Media queries for mobile/tablet/desktop
+│    
 │
 ├── images/              # Images directory (logo, perfumes, backgrounds)
 │   └── logo.png
-│
+│   └──...
 └── README.md            # This file
 ```
 

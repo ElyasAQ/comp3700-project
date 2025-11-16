@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Account - Nasagh</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="container">
+            <div class="logo">
+                <h1 style="color: #5D4E37; font-family: 'Georgia', serif;">نسغ Nasagh</h1>
+                <p style="font-size: 0.8em; color: #8B7355;">نسغ عصارة العود الخالدة</p>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="shop.html">Collection</a></li>
+                    <li><a href="about.html">Our Story</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                    <li><a href="account.html">Account</a></li>
+                    <li><a href="cart.html">Cart</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main id="main-content">
+        <div style="max-width: 1200px; margin: 0 auto;">
+            <h1 style="text-align: center; color: #5D4E37; font-size: 2.5em; margin-bottom: 50px;">My Account</h1>
+
+            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 40px; margin-bottom: 60px;">
+                
+                <!-- Login Form -->
+                <div class="content-box" style="background-color: #FFF8F0;">
+                    <h2 style="color: #5D4E37; margin-bottom: 25px;">Login</h2>
+                    
+                    <form action="https://httpbin.org/get" method="get">
+                        <fieldset>
+                            <legend>Sign In to Your Account</legend>
+                            
+                            <div class="form-group">
+                                <label for="login-email">Email Address: *</label>
+                                <input type="email" id="login-email" name="email" required placeholder="your.email@example.com">
+                            </div>
+
+                            <div class="form-group">
+                                <label for="login-password">Password: *</label>
+                                <input type="password" id="login-password" name="password" required placeholder="Enter your password">
+                            </div>
+
+                            <div class="form-group">
+                                <input type="checkbox" id="remember" name="remember" value="yes">
+                                <label for="remember" style="display: inline; font-weight: normal;">Remember me</label>
+                            </div>
+
+                            <button type="submit" style="width: 100%; margin-bottom: 15px;">Login</button>
+                            
+                            <p style="text-align: center; margin-top: 15px;">
+                                <a href="#" style="color: #8B7355; text-decoration: none;">Forgot Password?</a>
+                            </p>
+                        </fieldset>
+                    </form>
+                </div>
+
+                <!-- Registration Form -->
+                <div class="content-box" style="background-color: #F5E6D3;">
+                    <h2 style="color: #5D4E37; margin-bottom: 25px;">Create Account</h2>
+                    
+                    <form action="https://httpbin.org/get" method="get">
+                        <fieldset>
+                            <legend>New Customer Registration</legend>
+                            
+                            <div class="form-group">
+                                <label for="reg-name">Full Name: *</label>
+                                <input type="text" id="reg-name" name="name" required placeholder="Enter your full name">
+                            </div>
+
+                            <div class="form-group">
+                                <label for="reg-email">Email Address: *</label>
+                                <input type="email" id="reg-email" name="email" required placeholder="your.email@example.com">
+                            </div>
+
+                            <div class="form-group">
+                                <label for="reg-phone">Phone Number: *</label>
+                                <input type="tel" id="reg-phone" name="phone" required placeholder="+968 XXXX XXXX">
+                            </div>
+
+                            <div class="form-group">
+                                <label for="reg-password">Password: *</label>
+                                <input type="password" id="reg-password" name="password" required placeholder="Create a password">
+                            </div>
+
+                            <div class="form-group">
+                                <label for="reg-confirm">Confirm Password: *</label>
+                                <input type="password" id="reg-confirm" name="confirm_password" required placeholder="Confirm your password">
+                            </div>
+
+                            <div class="form-group">
+                                <input type="checkbox" id="terms" name="terms" value="accepted" required>
+                                <label for="terms" style="display: inline; font-weight: normal;">
+                                    I agree to the Terms & Conditions *
+                                </label>
+                            </div>
+
+                            <button type="submit" style="width: 100%;">Create Account</button>
+                        </fieldset>
+                    </form>
+                </div>
+            </div>
+
+            <!-- Scent Preference Quiz Form -->
+            <div class="content-box" style="background: linear-gradient(135deg, #F5E6D3 0%, #FFFFFF 100%);">
+                <h2 style="text-align: center; color: #5D4E37; margin-bottom: 30px;">🌸 Scent Finder Quiz</h2>
+                <p style="text-align: center; color: #666; margin-bottom: 30px;">
+                    Help us recommend the perfect fragrances for you by answering a few questions!
+                </p>
+                
+                <form action="https://httpbin.org/get" method="get">
+                    <fieldset>
+                        <legend>Your Scent Preferences</legend>
+                        
+                        <div class="form-group">
+                            <label for="occasion">When do you usually wear perfume?</label>
+                            <select id="occasion" name="occasion">
+                                <option value="">-- Select Occasion --</option>
+                                <option value="daily">Daily / Casual</option>
+                                <option value="work">Work / Professional</option>
+                                <option value="evening">Evening / Formal Events</option>
+                                <option value="special">Special Occasions</option>
+                            </select>
+                        </div>
+
+                        <div class="form-group">
+                            <label>What scent families do you prefer? (Select all that apply)</label>
+                            <div>
+                                <input type="checkbox" id="woody" name="scent_family[]" value="woody">
+                                <label for="woody" style="display: inline; font-weight: normal;">Woody (Oud, Sandalwood, Cedar)</label>
+                            </div>
+                            <div>
+                                <input type="checkbox" id="floral" name="scent_family[]" value="floral">
+                                <label for="floral" style="display: inline; font-weight: normal;">Floral (Rose, Jasmine, Lavender)</label>
+                            </div>
+                            <div>
+                                <input type="checkbox" id="oriental" name="scent_family[]" value="oriental">
+                                <label for="oriental" style="display: inline; font-weight: normal;">Oriental (Amber, Musk, Spices)</label>
+                            </div>
+                            <div>
+                                <input type="checkbox" id="fresh" name="scent_family[]" value="fresh">
+                                <label for="fresh" style="display: inline; font-weight: normal;">Fresh (Citrus, Aquatic, Green)</label>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label>Intensity Preference:</label>
+                            <div>
+                                <input type="radio" id="light" name="intensity" value="light">
+                                <label for="light" style="display: inline; font-weight: normal;">Light & Subtle</label>
+                            </div>
+                            <div>
+                                <input type="radio" id="moderate" name="intensity" value="moderate" checked>
+                                <label for="moderate" style="display: inline; font-weight: normal;">Moderate</label>
+                            </div>
+                            <div>
+                                <input type="radio" id="strong" name="intensity" value="strong">
+                                <label for="strong" style="display: inline; font-weight: normal;">Strong & Bold</label>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="budget">Budget Range (OMR):</label>
+                            <input type="range" id="budget" name="budget" min="10" max="100" value="30" step="5">
+                            <p style="text-align: center; color: #666;">10 - 100 OMR</p>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="season">Preferred Season:</label>
+                            <select id="season" name="season">
+                                <option value="all">All Seasons</option>
+                                <option value="summer">Summer</option>
+                                <option value="winter">Winter</option>
+                                <option value="spring">Spring</option>
+                                <option value="autumn">Autumn</option>
+                            </select>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="notes">Additional Notes or Preferences:</label>
+                            <textarea id="notes" name="notes" rows="4" placeholder="Tell us about any specific preferences, allergies, or favorite scents..."></textarea>
+                        </div>
+
+                        <button type="submit" style="width: 100%; padding: 15px; font-size: 1.1em;">
+                            Get Personalized Recommendations
+                        </button>
+                    </fieldset>
+                </form>
+            </div>
+
+            <!-- Order History Table -->
+            <section style="margin-top: 60px;">
+                <h2 style="color: #5D4E37; margin-bottom: 30px;">Recent Orders</h2>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Order ID</th>
+                            <th>Date</th>
+                            <th>Products</th>
+                            <th>Total (OMR)</th>
+                            <th>Status</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td style="font-weight: bold;">#ORD-2025-001</td>
+                            <td>Nov 10, 2025</td>
+                            <td>Midnight Oud (50ml)</td>
+                            <td>25.00</td>
+                            <td><span style="color: green; font-weight: bold;">Delivered</span></td>
+                        </tr>
+                        <tr>
+                            <td style="font-weight: bold;">#ORD-2025-002</td>
+                            <td>Nov 12, 2025</td>
+                            <td>Desert Rose (50ml), Royal Amber (75ml)</td>
+                            <td>52.00</td>
+                            <td><span style="color: orange; font-weight: bold;">In Transit</span></td>
+                        </tr>
+                        <tr>
+                            <td style="font-weight: bold;">#ORD-2025-003</td>
+                            <td>Nov 15, 2025</td>
+                            <td>Arabian Nights (50ml)</td>
+                            <td>28.00</td>
+                            <td><span style="color: blue; font-weight: bold;">Processing</span></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </section>
+
+            <!-- Wishlist Table -->
+            <section style="margin-top: 40px; margin-bottom: 60px;">
+                <h2 style="color: #5D4E37; margin-bottom: 30px;">My Wishlist</h2>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Product</th>
+                            <th>Category</th>
+                            <th>Price (OMR)</th>
+                            <th>Stock Status</th>
+                            <th>Action</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td style="font-weight: bold;">Jasmine Dream</td>
+                            <td>Floral Fragrances</td>
+                            <td>20.00</td>
+                            <td><span style="color: green;">In Stock</span></td>
+                            <td><a href="product-detail.html" style="color: #8B7355; text-decoration: none;">View Product</a></td>
+                        </tr>
+                        <tr>
+                            <td style="font-weight: bold;">Oud Essence Oil</td>
+                            <td>Essential Oils</td>
+                            <td>35.00</td>
+                            <td><span style="color: red;">Out of Stock</span></td>
+                            <td><a href="#" style="color: #8B7355; text-decoration: none;">Notify Me</a></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </section>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>نسغ Nasagh</h3>
+                    <p>Premium Arabian Perfumes</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="shop.html">Collection</a></li>
+                        <li><a href="about.html">Our Story</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                        <li><a href="cart.html">Cart</a></li>
+                        <li><a href="newsletter.html">Newsletter</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Contact</h4>
+                    <p>Email: s150229@student.squ.edu.om</p>
+                    <p>Phone: +968 71183928</p>
+                    <p>Muscat, Sultanate of Oman</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Nasagh Inc. All rights reserved. | Prepared by WEB Crafters Team</p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

@@ -1,1 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Your Cart – Nasagh</title>
+    <link rel="stylesheet" href="style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+
+<header>
+    <div class="container">
+        <div class="logo">
+            <h1>نسغ Nasagh</h1>
+            <p>Timeless Essence of Oud</p>
+        </div>
+        <nav>
+            <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="shop.html">Collection</a></li>
+                    <li><a href="about.html">Our Story</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                    <li><a href="account.html">Account</a></li>
+                    <li><a href="cart.html">Cart</a></li>
+            </ul>
+        </nav>
+    </div>
+</header>
+
+<main id="main-content">
+
+    <section class="content-box fade-in">
+        <h2>Your Cart</h2>
+        <p>Review your selected perfumes and complete your order.</p>
+
+        <!-- Cart Table (Assignment table #3) -->
+        <table>
+            <thead>
+                <tr>
+                    <th>Perfume</th>
+                    <th>Size</th>
+                    <th>Quantity</th>
+                    <th>Unit Price (OMR)</th>
+                    <th>Subtotal (OMR)</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Midnight Oud</td>
+                    <td>50 ml</td>
+                    <td>1</td>
+                    <td>25.0</td>
+                    <td>25.0</td>
+                </tr>
+                <tr>
+                    <td colspan="4" style="font-weight:600;">Total</td>
+                    <td>25.0</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <!-- Checkout Form (to httpbin) -->
+        <form action="https://httpbin.org/get" method="get" style="margin-top: 35px;">
+            <fieldset>
+                <legend>Checkout Details</legend>
+
+                <div class="form-group">
+                    <label for="full-name">Full Name</label>
+                    <input type="text" id="full-name" name="name" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="address">Shipping Address</label>
+                    <textarea id="address" name="address" rows="3" required></textarea>
+                </div>
+
+                <div class="form-group">
+                    <label for="city">City</label>
+                    <input type="text" id="city" name="city" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="phone">Phone</label>
+                    <input type="tel" id="phone" name="phone" required>
+                </div>
+
+                <div class="form-group">
+                    <label>Payment Method</label>
+                    <label><input type="radio" name="payment" value="card" checked> Credit / Debit Card</label>
+                    <label><input type="radio" name="payment" value="cod"> Cash on Delivery</label>
+                </div>
+
+                <button type="submit">Place Order</button>
+            </fieldset>
+        </form>
+    </section>
+
+</main>
+
+<footer>
+    <div class="container">
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>نسغ Nasagh</h3>
+                <p>Timeless Arabian Perfumes</p>
+                <p style="margin-top: 15px; font-size: 0.9em;">Crafting olfactory excellence since 2022</p>
+            </div>
+            <div class="footer-section">
+                <h4>Explore</h4>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="shop.html">Collection</a></li>
+                    <li><a href="about.html">Our Story</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                    <li><a href="cart.html">Cart</a></li>
+                    <li><a href="newsletter.html">Newsletter</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                    <h4>Contact</h4>
+                    <p>Email: s150229@student.squ.edu.om</p>
+                    <p>Phone: +968 71183928</p>
+                    <p>Muscat, Sultanate of Oman</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2025 Nasagh Inc. All rights reserved. | Crafted by WEB Crafters Team</p>
+        </div>
+    </div>
+</footer>
+
+</body>
+</html>
 

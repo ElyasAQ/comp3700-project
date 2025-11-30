@@ -4,128 +4,144 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>My Account - Nasagh</title>
-    <link rel="stylesheet" href="style.css">
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.0/font/bootstrap-icons.css">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Cormorant+Garamond:wght@300;400;500;600&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
 </head>
-<body>
-    <!-- Header -->
-    <header>
+<body class="bg-light">
+    <!-- Navigation Bar -->
+    <nav class="navbar navbar-expand-lg navbar-white bg-white fixed-top shadow-sm">
         <div class="container">
-             <div class="logo">
-                <img src="images/oud1 - Copy-Recovered.png" alt="Nasagh Logo" class="header-logo">
-                <p class="logo-tagline">Timeless Essence of Oud</p>
-             </div>
-            <nav>
-                <ul>
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="shop.html">Collection</a></li>
-                    <li><a href="about.html">Our Story</a></li>
-                    <li><a href="contact.html">Contact</a></li>
-                    <li><a href="account.html">Account</a></li>
-                    <li><a href="cart.html">Cart</a></li>
+            <a class="navbar-brand d-flex align-items-center" href="index.html">
+                <img src="images/oud1 - Copy-Recovered.png" alt="Nasagh Logo" height="50" class="me-2">
+                <div class="d-flex flex-column">
+                    <span class="fw-bold fs-4">NASAGH</span>
+                    <small class="text-muted fst-italic">Timeless Essence of Oud</small>
+                </div>
+            </a>
+            
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="shop.html">Collection</a></li>
+                    <li class="nav-item"><a class="nav-link" href="about.html">Our Story</a></li>
+                    <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+                    <li class="nav-item"><a class="nav-link active fw-bold" href="account.html">Account</a></li>
+                    <li class="nav-item"><a class="nav-link" href="cart.html">Cart</a></li>
+                    <li class="nav-item"><a class="nav-link" href="questionnaire.html">Questionnaire</a></li>
+                    <li class="nav-item"><a class="nav-link" href="calculate.html">Calculator</a></li>
+                    <li class="nav-item"><a class="nav-link" href="funpage.html">Fun Page</a></li>
                 </ul>
-            </nav>
+            </div>
         </div>
-    </header>
+    </nav>
 
     <!-- Main Content -->
-    <main id="main-content">
-        <div style="max-width: 1200px; margin: 0 auto;">
-            <h1 style="text-align: center; color: #5D4E37; font-size: 2.5em; margin-bottom: 50px;">My Account</h1>
+    <main class="container mt-5 pt-5">
+        <div class="row justify-content-center">
+            <div class="col-12 text-center mb-5">
+                <h1 class="display-4 fw-bold text-dark mb-3">My Account</h1>
+                <p class="lead text-secondary">Manage your fragrance journey with us</p>
+            </div>
+        </div>
 
-            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 40px; margin-bottom: 60px;">
-                
-                <!-- Login Form -->
-                <div class="content-box" style="background-color: #FFF8F0;">
-                    <h2 style="color: #5D4E37; margin-bottom: 25px;">Login</h2>
-                    
-                    <form action="https://httpbin.org/get" method="get">
-                        <fieldset>
-                            <legend>Sign In to Your Account</legend>
+        <div class="row g-4 mb-5">
+            <!-- Login Form -->
+            <div class="col-lg-6">
+                <div class="card border-0 shadow h-100">
+                    <div class="card-body p-4">
+                        <h3 class="card-title mb-4 text-dark">Login</h3>
+                        
+                        <form action="https://httpbin.org/get" method="get">
+                            <div class="mb-3">
+                                <label for="login-email" class="form-label fw-semibold">Email Address *</label>
+                                <input type="email" class="form-control border-secondary" id="login-email" name="email" required placeholder="your.email@example.com">
+                            </div>
+
+                            <div class="mb-3">
+                                <label for="login-password" class="form-label fw-semibold">Password *</label>
+                                <input type="password" class="form-control border-secondary" id="login-password" name="password" required placeholder="Enter your password">
+                            </div>
+
+                            <div class="mb-3 form-check">
+                                <input type="checkbox" class="form-check-input" id="remember" name="remember" value="yes">
+                                <label class="form-check-label" for="remember">Remember me</label>
+                            </div>
+
+                            <button type="submit" class="btn btn-dark w-100 mb-3">Login</button>
                             
-                            <div class="form-group">
-                                <label for="login-email">Email Address: *</label>
-                                <input type="email" id="login-email" name="email" required placeholder="your.email@example.com">
+                            <div class="text-center">
+                                <a href="#" class="text-decoration-none text-muted">Forgot Password?</a>
                             </div>
-
-                            <div class="form-group">
-                                <label for="login-password">Password: *</label>
-                                <input type="password" id="login-password" name="password" required placeholder="Enter your password">
-                            </div>
-
-                            <div class="form-group">
-                                <input type="checkbox" id="remember" name="remember" value="yes">
-                                <label for="remember" style="display: inline; font-weight: normal;">Remember me</label>
-                            </div>
-
-                            <button type="submit" style="width: 100%; margin-bottom: 15px;">Login</button>
-                            
-                            <p style="text-align: center; margin-top: 15px;">
-                                <a href="#" style="color: #8B7355; text-decoration: none;">Forgot Password?</a>
-                            </p>
-                        </fieldset>
-                    </form>
-                </div>
-
-                <!-- Registration Form -->
-                <div class="content-box" style="background-color: #F5E6D3;">
-                    <h2 style="color: #5D4E37; margin-bottom: 25px;">Create Account</h2>
-                    
-                    <form action="https://httpbin.org/get" method="get">
-                        <fieldset>
-                            <legend>New Customer Registration</legend>
-                            
-                            <div class="form-group">
-                                <label for="reg-name">Full Name: *</label>
-                                <input type="text" id="reg-name" name="name" required placeholder="Enter your full name">
-                            </div>
-
-                            <div class="form-group">
-                                <label for="reg-email">Email Address: *</label>
-                                <input type="email" id="reg-email" name="email" required placeholder="your.email@example.com">
-                            </div>
-
-                            <div class="form-group">
-                                <label for="reg-phone">Phone Number: *</label>
-                                <input type="tel" id="reg-phone" name="phone" required placeholder="+968 XXXX XXXX">
-                            </div>
-
-                            <div class="form-group">
-                                <label for="reg-password">Password: *</label>
-                                <input type="password" id="reg-password" name="password" required placeholder="Create a password">
-                            </div>
-
-                            <div class="form-group">
-                                <label for="reg-confirm">Confirm Password: *</label>
-                                <input type="password" id="reg-confirm" name="confirm_password" required placeholder="Confirm your password">
-                            </div>
-
-                            <div class="form-group">
-                                <input type="checkbox" id="terms" name="terms" value="accepted" required>
-                                <label for="terms" style="display: inline; font-weight: normal;">
-                                    I agree to the Terms & Conditions *
-                                </label>
-                            </div>
-
-                            <button type="submit" style="width: 100%;">Create Account</button>
-                        </fieldset>
-                    </form>
+                        </form>
+                    </div>
                 </div>
             </div>
 
-            <!-- Scent Preference Quiz Form -->
-            <div class="content-box" style="background: linear-gradient(135deg, #F5E6D3 0%, #FFFFFF 100%);">
-                <h2 style="text-align: center; color: #5D4E37; margin-bottom: 30px;">🌸 Scent Finder Quiz</h2>
-                <p style="text-align: center; color: #666; margin-bottom: 30px;">
+            <!-- Registration Form -->
+            <div class="col-lg-6">
+                <div class="card border-0 shadow h-100">
+                    <div class="card-body p-4">
+                        <h3 class="card-title mb-4 text-dark">Create Account</h3>
+                        
+                        <form action="https://httpbin.org/get" method="get">
+                            <div class="mb-3">
+                                <label for="reg-name" class="form-label fw-semibold">Full Name *</label>
+                                <input type="text" class="form-control border-secondary" id="reg-name" name="name" required placeholder="Enter your full name">
+                            </div>
+
+                            <div class="mb-3">
+                                <label for="reg-email" class="form-label fw-semibold">Email Address *</label>
+                                <input type="email" class="form-control border-secondary" id="reg-email" name="email" required placeholder="your.email@example.com">
+                            </div>
+
+                            <div class="mb-3">
+                                <label for="reg-phone" class="form-label fw-semibold">Phone Number *</label>
+                                <input type="tel" class="form-control border-secondary" id="reg-phone" name="phone" required placeholder="+968 XXXX XXXX">
+                            </div>
+
+                            <div class="mb-3">
+                                <label for="reg-password" class="form-label fw-semibold">Password *</label>
+                                <input type="password" class="form-control border-secondary" id="reg-password" name="password" required placeholder="Create a password">
+                            </div>
+
+                            <div class="mb-3">
+                                <label for="reg-confirm" class="form-label fw-semibold">Confirm Password *</label>
+                                <input type="password" class="form-control border-secondary" id="reg-confirm" name="confirm_password" required placeholder="Confirm your password">
+                            </div>
+
+                            <div class="mb-3 form-check">
+                                <input type="checkbox" class="form-check-input" id="terms" name="terms" value="accepted" required>
+                                <label class="form-check-label" for="terms">I agree to the Terms & Conditions *</label>
+                            </div>
+
+                            <button type="submit" class="btn btn-dark w-100">Create Account</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Scent Preference Quiz Form -->
+        <div class="card border-0 shadow mb-5">
+            <div class="card-body p-4">
+                <h2 class="text-center mb-4 text-dark">🌸 Scent Finder Quiz</h2>
+                <p class="text-center text-muted mb-4">
                     Help us recommend the perfect fragrances for you by answering a few questions!
                 </p>
                 
                 <form action="https://httpbin.org/get" method="get">
-                    <fieldset>
-                        <legend>Your Scent Preferences</legend>
-                        
-                        <div class="form-group">
-                            <label for="occasion">When do you usually wear perfume?</label>
-                            <select id="occasion" name="occasion">
+                    <div class="row g-3">
+                        <div class="col-md-6">
+                            <label for="occasion" class="form-label fw-semibold">When do you usually wear perfume?</label>
+                            <select class="form-select border-secondary" id="occasion" name="occasion">
                                 <option value="">-- Select Occasion --</option>
                                 <option value="daily">Daily / Casual</option>
                                 <option value="work">Work / Professional</option>
@@ -134,51 +150,68 @@
                             </select>
                         </div>
 
-                        <div class="form-group">
-                            <label>What scent families do you prefer? (Select all that apply)</label>
-                            <div>
-                                <input type="checkbox" id="woody" name="scent_family[]" value="woody">
-                                <label for="woody" style="display: inline; font-weight: normal;">Woody (Oud, Sandalwood, Cedar)</label>
-                            </div>
-                            <div>
-                                <input type="checkbox" id="floral" name="scent_family[]" value="floral">
-                                <label for="floral" style="display: inline; font-weight: normal;">Floral (Rose, Jasmine, Lavender)</label>
-                            </div>
-                            <div>
-                                <input type="checkbox" id="oriental" name="scent_family[]" value="oriental">
-                                <label for="oriental" style="display: inline; font-weight: normal;">Oriental (Amber, Musk, Spices)</label>
-                            </div>
-                            <div>
-                                <input type="checkbox" id="fresh" name="scent_family[]" value="fresh">
-                                <label for="fresh" style="display: inline; font-weight: normal;">Fresh (Citrus, Aquatic, Green)</label>
-                            </div>
-                        </div>
-
-                        <div class="form-group">
-                            <label>Intensity Preference:</label>
-                            <div>
-                                <input type="radio" id="light" name="intensity" value="light">
-                                <label for="light" style="display: inline; font-weight: normal;">Light & Subtle</label>
-                            </div>
-                            <div>
-                                <input type="radio" id="moderate" name="intensity" value="moderate" checked>
-                                <label for="moderate" style="display: inline; font-weight: normal;">Moderate</label>
-                            </div>
-                            <div>
-                                <input type="radio" id="strong" name="intensity" value="strong">
-                                <label for="strong" style="display: inline; font-weight: normal;">Strong & Bold</label>
+                        <div class="col-12">
+                            <label class="form-label fw-semibold">What scent families do you prefer? (Select all that apply)</label>
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <div class="form-check mb-2">
+                                        <input class="form-check-input" type="checkbox" id="woody" name="scent_family[]" value="woody">
+                                        <label class="form-check-label" for="woody">Woody (Oud, Sandalwood, Cedar)</label>
+                                    </div>
+                                    <div class="form-check mb-2">
+                                        <input class="form-check-input" type="checkbox" id="floral" name="scent_family[]" value="floral">
+                                        <label class="form-check-label" for="floral">Floral (Rose, Jasmine, Lavender)</label>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="form-check mb-2">
+                                        <input class="form-check-input" type="checkbox" id="oriental" name="scent_family[]" value="oriental">
+                                        <label class="form-check-label" for="oriental">Oriental (Amber, Musk, Spices)</label>
+                                    </div>
+                                    <div class="form-check mb-2">
+                                        <input class="form-check-input" type="checkbox" id="fresh" name="scent_family[]" value="fresh">
+                                        <label class="form-check-label" for="fresh">Fresh (Citrus, Aquatic, Green)</label>
+                                    </div>
+                                </div>
                             </div>
                         </div>
 
-                        <div class="form-group">
-                            <label for="budget">Budget Range (OMR):</label>
-                            <input type="range" id="budget" name="budget" min="10" max="100" value="30" step="5">
-                            <p style="text-align: center; color: #666;">10 - 100 OMR</p>
+                        <div class="col-12">
+                            <label class="form-label fw-semibold">Intensity Preference:</label>
+                            <div class="row">
+                                <div class="col-md-4">
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="radio" id="light" name="intensity" value="light">
+                                        <label class="form-check-label" for="light">Light & Subtle</label>
+                                    </div>
+                                </div>
+                                <div class="col-md-4">
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="radio" id="moderate" name="intensity" value="moderate" checked>
+                                        <label class="form-check-label" for="moderate">Moderate</label>
+                                    </div>
+                                </div>
+                                <div class="col-md-4">
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="radio" id="strong" name="intensity" value="strong">
+                                        <label class="form-check-label" for="strong">Strong & Bold</label>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
 
-                        <div class="form-group">
-                            <label for="season">Preferred Season:</label>
-                            <select id="season" name="season">
+                        <div class="col-12">
+                            <label for="budget" class="form-label fw-semibold">Budget Range (OMR):</label>
+                            <input type="range" class="form-range" id="budget" name="budget" min="10" max="100" value="30" step="5">
+                            <div class="d-flex justify-content-between">
+                                <small class="text-muted">10 OMR</small>
+                                <small class="text-muted">100 OMR</small>
+                            </div>
+                        </div>
+
+                        <div class="col-md-6">
+                            <label for="season" class="form-label fw-semibold">Preferred Season:</label>
+                            <select class="form-select border-secondary" id="season" name="season">
                                 <option value="all">All Seasons</option>
                                 <option value="summer">Summer</option>
                                 <option value="winter">Winter</option>
@@ -187,23 +220,95 @@
                             </select>
                         </div>
 
-                        <div class="form-group">
-                            <label for="notes">Additional Notes or Preferences:</label>
-                            <textarea id="notes" name="notes" rows="4" placeholder="Tell us about any specific preferences, allergies, or favorite scents..."></textarea>
+                        <div class="col-12">
+                            <label for="notes" class="form-label fw-semibold">Additional Notes or Preferences:</label>
+                            <textarea class="form-control border-secondary" id="notes" name="notes" rows="4" placeholder="Tell us about any specific preferences, allergies, or favorite scents..."></textarea>
                         </div>
 
-                        <button type="submit" style="width: 100%; padding: 15px; font-size: 1.1em;">
-                            Get Personalized Recommendations
-                        </button>
-                    </fieldset>
+                        <div class="col-12 text-center">
+                            <button type="submit" class="btn btn-dark btn-lg px-5">
+                                Get Personalized Recommendations
+                            </button>
+                        </div>
+                    </div>
                 </form>
             </div>
+        </div>
 
-            <!-- Order History Table -->
-            <section style="margin-top: 60px;">
-                <h2 style="color: #5D4E37; margin-bottom: 30px;">Recent Orders</h2>
-                <table>
-                    <thead>
+        <!-- Add New Order Form -->
+        <div class="card border-success mb-4">
+            <div class="card-header bg-success text-white">
+                <h5 class="mb-0"><i class="bi bi-plus-circle me-2"></i>Add New Order</h5>
+            </div>
+            <div class="card-body">
+                <form id="addOrderForm" class="row g-3">
+                    <div class="col-md-3">
+                        <label for="orderId" class="form-label">Order ID</label>
+                        <input type="text" class="form-control" id="orderId" placeholder="#ORD-2025-001" required>
+                    </div>
+                    <div class="col-md-3">
+                        <label for="orderDate" class="form-label">Date</label>
+                        <input type="date" class="form-control" id="orderDate" required>
+                    </div>
+                    <div class="col-md-3">
+                        <label for="orderProducts" class="form-label">Products</label>
+                        <input type="text" class="form-control" id="orderProducts" placeholder="Midnight Oud (50ml)" required>
+                    </div>
+                    <div class="col-md-2">
+                        <label for="orderTotal" class="form-label">Total (OMR)</label>
+                        <input type="number" class="form-control" id="orderTotal" step="0.01" required>
+                    </div>
+                    <div class="col-md-2">
+                        <label for="orderStatus" class="form-label">Status</label>
+                        <select class="form-select" id="orderStatus" required>
+                            <option value="Processing">Processing</option>
+                            <option value="In Transit">In Transit</option>
+                            <option value="Delivered">Delivered</option>
+                            <option value="Cancelled">Cancelled</option>
+                        </select>
+                    </div>
+                    <div class="col-12 text-center">
+                        <button type="submit" class="btn btn-success me-2">Add Order</button>
+                        <button type="reset" class="btn btn-outline-secondary">Clear</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+
+        <!-- Search Orders Form -->
+        <div class="card border-info mb-4">
+            <div class="card-header bg-info text-white">
+                <h5 class="mb-0"><i class="bi bi-search me-2"></i>Search Orders</h5>
+            </div>
+            <div class="card-body">
+                <form id="searchOrderForm" class="row g-3">
+                    <div class="col-md-4">
+                        <label for="searchOrderId" class="form-label">Search by Order ID</label>
+                        <input type="text" class="form-control" id="searchOrderId" placeholder="Enter order ID...">
+                    </div>
+                    <div class="col-md-4">
+                        <label for="searchStatus" class="form-label">Filter by Status</label>
+                        <select class="form-select" id="searchStatus">
+                            <option value="">All Statuses</option>
+                            <option value="Processing">Processing</option>
+                            <option value="In Transit">In Transit</option>
+                            <option value="Delivered">Delivered</option>
+                            <option value="Cancelled">Cancelled</option>
+                        </select>
+                    </div>
+                    <div class="col-md-4 d-flex align-items-end">
+                        <button type="submit" class="btn btn-info w-100">Search</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+
+        <!-- Order History Table -->
+        <section class="mb-5">
+            <h2 class="mb-4 text-dark">Recent Orders</h2>
+            <div class="table-responsive">
+                <table class="table table-striped table-hover border">
+                    <thead class="table-dark">
                         <tr>
                             <th>Order ID</th>
                             <th>Date</th>
@@ -212,37 +317,19 @@
                             <th>Status</th>
                         </tr>
                     </thead>
-                    <tbody>
-                        <tr>
-                            <td style="font-weight: bold;">#ORD-2025-001</td>
-                            <td>Nov 10, 2025</td>
-                            <td>Midnight Oud (50ml)</td>
-                            <td>25.00</td>
-                            <td><span style="color: green; font-weight: bold;">Delivered</span></td>
-                        </tr>
-                        <tr>
-                            <td style="font-weight: bold;">#ORD-2025-002</td>
-                            <td>Nov 12, 2025</td>
-                            <td>Desert Rose (50ml), Royal Amber (75ml)</td>
-                            <td>52.00</td>
-                            <td><span style="color: orange; font-weight: bold;">In Transit</span></td>
-                        </tr>
-                        <tr>
-                            <td style="font-weight: bold;">#ORD-2025-003</td>
-                            <td>Nov 15, 2025</td>
-                            <td>Arabian Nights (50ml)</td>
-                            <td>28.00</td>
-                            <td><span style="color: blue; font-weight: bold;">Processing</span></td>
-                        </tr>
+                    <tbody id="ordersTableBody">
+                        <!-- Orders will be dynamically inserted here by JavaScript -->
                     </tbody>
                 </table>
-            </section>
+            </div>
+        </section>
 
-            <!-- Wishlist Table -->
-            <section style="margin-top: 40px; margin-bottom: 60px;">
-                <h2 style="color: #5D4E37; margin-bottom: 30px;">My Wishlist</h2>
-                <table>
-                    <thead>
+        <!-- Wishlist Table -->
+        <section class="mb-5">
+            <h2 class="mb-4 text-dark">My Wishlist</h2>
+            <div class="table-responsive">
+                <table class="table table-striped table-hover border">
+                    <thead class="table-dark">
                         <tr>
                             <th>Product</th>
                             <th>Category</th>
@@ -253,56 +340,183 @@
                     </thead>
                     <tbody>
                         <tr>
-                            <td style="font-weight: bold;">Jasmine Dream</td>
+                            <td class="fw-bold">Jasmine Dream</td>
                             <td>Floral Fragrances</td>
                             <td>20.00</td>
-                            <td><span style="color: green;">In Stock</span></td>
-                            <td><a href="product-detail.html" style="color: #8B7355; text-decoration: none;">View Product</a></td>
+                            <td><span class="badge bg-success">In Stock</span></td>
+                            <td><a href="product-detail.html" class="btn btn-outline-dark btn-sm">View Product</a></td>
                         </tr>
                         <tr>
-                            <td style="font-weight: bold;">Oud Essence Oil</td>
+                            <td class="fw-bold">Oud Essence Oil</td>
                             <td>Essential Oils</td>
                             <td>35.00</td>
-                            <td><span style="color: red;">Out of Stock</span></td>
-                            <td><a href="#" style="color: #8B7355; text-decoration: none;">Notify Me</a></td>
+                            <td><span class="badge bg-danger">Out of Stock</span></td>
+                            <td><a href="#" class="btn btn-outline-secondary btn-sm">Notify Me</a></td>
                         </tr>
                     </tbody>
                 </table>
-            </section>
-        </div>
+            </div>
+        </section>
     </main>
 
     <!-- Footer -->
-    <footer>
+    <footer class="bg-dark text-light pt-5 mt-5">
         <div class="container">
-            <div class="footer-content">
-                <div class="footer-section">
-                    <h3>نسغ Nasagh</h3>
+            <div class="row g-4">
+                <div class="col-lg-4">
+                    <h5 class="fw-bold">نسغ Nasagh</h5>
                     <p>Premium Arabian Perfumes</p>
                 </div>
-                <div class="footer-section">
-                    <h4>Quick Links</h4>
-                    <ul>
-                        <li><a href="index.html">Home</a></li>
-                        <li><a href="shop.html">Collection</a></li>
-                        <li><a href="about.html">Our Story</a></li>
-                        <li><a href="contact.html">Contact</a></li>
-                        <li><a href="cart.html">Cart</a></li>
-                        <li><a href="newsletter.html">Newsletter</a></li>
+                <div class="col-lg-4">
+                    <h5>Quick Links</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="index.html" class="text-light text-decoration-none">Home</a></li>
+                        <li><a href="shop.html" class="text-light text-decoration-none">Collection</a></li>
+                        <li><a href="about.html" class="text-light text-decoration-none">Our Story</a></li>
+                        <li><a href="contact.html" class="text-light text-decoration-none">Contact</a></li>
+                        <li><a href="cart.html" class="text-light text-decoration-none">Cart</a></li>
+                        <li><a href="newsletter.html" class="text-light text-decoration-none">Newsletter</a></li>
                     </ul>
                 </div>
-                <div class="footer-section">
-                    <h4>Contact</h4>
+                <div class="col-lg-4">
+                    <h5>Contact</h5>
                     <p>Email: s150229@student.squ.edu.om</p>
                     <p>Phone: +968 71183928</p>
                     <p>Muscat, Sultanate of Oman</p>
                 </div>
             </div>
-            <div class="footer-bottom">
-                <p>&copy; 2025 Nasagh Inc. All rights reserved. | Prepared by WEB Crafters Team</p>
+            <div class="row mt-4 pt-4 border-top border-secondary">
+                <div class="col-12 text-center">
+                    <p class="mb-0">&copy; 2025 Nasagh Inc. All rights reserved. | Prepared by WEB Crafters Team</p>
+                </div>
             </div>
         </div>
     </footer>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    
+    <!-- JavaScript for Dynamic Order Management -->
+    <script>
+        // Order Constructor Function
+        function Order(orderId, date, products, total, status) {
+            this.orderId = orderId;
+            this.date = date;
+            this.products = products;
+            this.total = total;
+            this.status = status;
+        }
+
+        // Initial Orders Array
+        const orders = [
+            new Order(
+                "#ORD-2025-001",
+                "Nov 10, 2025",
+                "Midnight Oud (50ml)",
+                25.00,
+                "Delivered"
+            ),
+            new Order(
+                "#ORD-2025-002",
+                "Nov 12, 2025",
+                "Desert Rose (50ml), Royal Amber (75ml)",
+                52.00,
+                "In Transit"
+            ),
+            new Order(
+                "#ORD-2025-003",
+                "Nov 15, 2025",
+                "Arabian Nights (50ml)",
+                28.00,
+                "Processing"
+            )
+        ];
+
+        // Function to display all orders
+        function displayOrders(ordersArray = orders) {
+            const tableBody = document.getElementById('ordersTableBody');
+            tableBody.innerHTML = '';
+
+            ordersArray.forEach(order => {
+                let statusBadge = '';
+                switch(order.status) {
+                    case 'Delivered':
+                        statusBadge = '<span class="badge bg-success">Delivered</span>';
+                        break;
+                    case 'In Transit':
+                        statusBadge = '<span class="badge bg-warning text-dark">In Transit</span>';
+                        break;
+                    case 'Processing':
+                        statusBadge = '<span class="badge bg-primary">Processing</span>';
+                        break;
+                    case 'Cancelled':
+                        statusBadge = '<span class="badge bg-danger">Cancelled</span>';
+                        break;
+                    default:
+                        statusBadge = '<span class="badge bg-secondary">' + order.status + '</span>';
+                }
+
+                const orderHTML = `
+                    <tr>
+                        <td class="fw-bold">${order.orderId}</td>
+                        <td>${order.date}</td>
+                        <td>${order.products}</td>
+                        <td>${order.total.toFixed(2)}</td>
+                        <td>${statusBadge}</td>
+                    </tr>
+                `;
+                tableBody.innerHTML += orderHTML;
+            });
+        }
+
+        // Function to add new order
+        function addOrder(event) {
+            event.preventDefault();
+            
+            const orderId = document.getElementById('orderId').value;
+            const date = new Date(document.getElementById('orderDate').value).toLocaleDateString('en-US', {
+                year: 'numeric',
+                month: 'short',
+                day: 'numeric'
+            });
+            const products = document.getElementById('orderProducts').value;
+            const total = parseFloat(document.getElementById('orderTotal').value);
+            const status = document.getElementById('orderStatus').value;
+
+            const newOrder = new Order(orderId, date, products, total, status);
+            orders.push(newOrder);
+            
+            displayOrders();
+            document.getElementById('addOrderForm').reset();
+            
+            // Show success message
+            alert('Order added successfully!');
+        }
+
+        // Function to search orders
+        function searchOrders(event) {
+            event.preventDefault();
+            
+            const searchOrderId = document.getElementById('searchOrderId').value.toLowerCase();
+            const searchStatus = document.getElementById('searchStatus').value;
+            
+            const filteredOrders = orders.filter(order => {
+                const matchesId = order.orderId.toLowerCase().includes(searchOrderId);
+                const matchesStatus = !searchStatus || order.status === searchStatus;
+                return matchesId && matchesStatus;
+            });
+            
+            displayOrders(filteredOrders);
+        }
+
+        // Event Listeners
+        document.getElementById('addOrderForm').addEventListener('submit', addOrder);
+        document.getElementById('searchOrderForm').addEventListener('submit', searchOrders);
+
+        // Initialize display
+        displayOrders();
+    </script>
 </body>
 </html>
+
 

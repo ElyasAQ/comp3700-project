@@ -1,0 +1,391 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Fun Page – Nasagh</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.0/font/bootstrap-icons.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body class="bg-light">
+    <!-- Navigation Bar -->
+    <nav class="navbar navbar-expand-lg navbar-white bg-white fixed-top shadow-sm">
+        <div class="container">
+            <a class="navbar-brand d-flex align-items-center" href="index.html">
+                <img src="images/oud1 - Copy-Recovered.png" alt="Nasagh Logo" height="50" class="me-2">
+                <div class="d-flex flex-column">
+                    <span class="fw-bold fs-4">NASAGH</span>
+                    <small class="text-muted fst-italic">Timeless Essence of Oud</small>
+                </div>
+            </a>
+            
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="shop.html">Collection</a></li>
+                    <li class="nav-item"><a class="nav-link" href="about.html">Our Story</a></li>
+                    <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+                    <li class="nav-item"><a class="nav-link" href="account.html">Account</a></li>
+                    <li class="nav-item"><a class="nav-link" href="cart.html">Cart</a></li>
+                    <li class="nav-item"><a class="nav-link" href="questionnaire.html">Questionnaire</a></li>
+                    <li class="nav-item"><a class="nav-link" href="calculate.html">Calculator</a></li>
+                    <li class="nav-item"><a class="nav-link active fw-bold" href="funpage.html">Fun Page</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <main class="container mt-5 pt-5">
+        <div class="row justify-content-center">
+            <div class="col-lg-8">
+                <div class="card border-0 shadow">
+                    <div class="card-body p-4 p-md-5">
+                        <div class="text-center mb-5">
+                            <i class="bi bi-dice-5 display-4 text-primary mb-3"></i>
+                            <h1 class="card-title">Guess the Scent</h1>
+                            <p class="lead text-muted">
+                                Read the description and guess which perfume it belongs to!
+                            </p>
+                        </div>
+
+                        <!-- Game Area -->
+                        <div class="text-center mb-4">
+                            <div class="card bg-light border-0 mb-4">
+                                <div class="card-body">
+                                    <h4 id="scentDescription" class="text-dark">Loading game...</h4>
+                                </div>
+                            </div>
+
+                            <div class="row g-3 mb-4">
+                                <div class="col-md-6">
+                                    <button class="btn btn-outline-primary w-100 h-100 py-3 choice-btn" onclick="checkAnswer(0)">
+                                        <span id="choice1">Option 1</span>
+                                    </button>
+                                </div>
+                                <div class="col-md-6">
+                                    <button class="btn btn-outline-primary w-100 h-100 py-3 choice-btn" onclick="checkAnswer(1)">
+                                        <span id="choice2">Option 2</span>
+                                    </button>
+                                </div>
+                                <div class="col-md-6">
+                                    <button class="btn btn-outline-primary w-100 h-100 py-3 choice-btn" onclick="checkAnswer(2)">
+                                        <span id="choice3">Option 3</span>
+                                    </button>
+                                </div>
+                                <div class="col-md-6">
+                                    <button class="btn btn-outline-primary w-100 h-100 py-3 choice-btn" onclick="checkAnswer(3)">
+                                        <span id="choice4">Option 4</span>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Results -->
+                        <div id="resultAlert" class="alert text-center mb-4" style="display: none;">
+                            <h5 id="resultMessage"></h5>
+                        </div>
+
+                        <!-- Score & Controls -->
+                        <div class="text-center">
+                            <div class="row mb-4">
+                                <div class="col-md-4">
+                                    <div class="card border-success">
+                                        <div class="card-body">
+                                            <h5 id="score">0</h5>
+                                            <small class="text-muted">Score</small>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-4">
+                                    <div class="card border-info">
+                                        <div class="card-body">
+                                            <h5 id="round">1/5</h5>
+                                            <small class="text-muted">Round</small>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-4">
+                                    <div class="card border-warning">
+                                        <div class="card-body">
+                                            <h5 id="streak">0</h5>
+                                            <small class="text-muted">Streak</small>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <button id="nextBtn" class="btn btn-success btn-lg" onclick="nextQuestion()" style="display: none;">
+                                Next Question <i class="bi bi-arrow-right"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-dark text-light pt-5 mt-5">
+        <div class="container">
+            <div class="row g-4">
+                <div class="col-lg-4">
+                    <h5 class="fw-bold">نسغ Nasagh</h5>
+                    <p>Timeless Arabian Perfumes</p>
+                    <p class="small text-secondary">Crafting olfactory excellence since 2022</p>
+                </div>
+                <div class="col-lg-4">
+                    <h5>Explore</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="index.html" class="text-light text-decoration-none">Home</a></li>
+                        <li><a href="shop.html" class="text-light text-decoration-none">Collection</a></li>
+                        <li><a href="about.html" class="text-light text-decoration-none">Our Story</a></li>
+                        <li><a href="contact.html" class="text-light text-decoration-none">Contact</a></li>
+                        <li><a href="cart.html" class="text-light text-decoration-none">Cart</a></li>
+                        <li><a href="newsletter.html" class="text-light text-decoration-none">Newsletter</a></li>
+                        <li><a href="questionnaire.html" class="text-light text-decoration-none">Questionnaire</a></li>
+                        <li><a href="calculate.html" class="text-light text-decoration-none">Calculator</a></li>
+                        <li><a href="funpage.html" class="text-light text-decoration-none">Fun Page</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-4">
+                    <h5>Connect</h5>
+                    <p>Email: s150229@student.squ.edu.om</p>
+                    <p>Phone: +968 71183928</p>
+                    <p>Muscat, Sultanate of Oman</p>
+                </div>
+            </div>
+            <div class="row mt-4 pt-4 border-top border-secondary">
+                <div class="col-12 text-center">
+                    <p class="mb-0">&copy; 2025 Nasagh Inc. All rights reserved. | Crafted by WEB Crafters Team</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- JavaScript for Simple Quiz Game -->
+<script>
+    // GAME DATA - PERFUME DESCRIPTIONS AND NAMES
+    // This array stores all the quiz questions with their descriptions and answer options
+    const perfumeQuiz = [
+        {
+            description: "A rich, woody scent with deep oud and warm amber notes, perfect for evening wear",
+            correctAnswer: "Midnight Oud",
+            options: ["Desert Rose", "Midnight Oud", "Royal Amber", "Amber Flame"]
+        },
+        {
+            description: "Floral blend of Damascus rose and jasmine with subtle oriental touches",
+            correctAnswer: "Desert Rose", 
+            options: ["Midnight Oud", "Desert Rose", "Royal Amber", "Amber Flame"]
+        },
+        {
+            description: "Opulent amber resin combined with sandalwood and precious musk for royalty",
+            correctAnswer: "Royal Amber",
+            options: ["Desert Rose", "Amber Flame", "Royal Amber", "Midnight Oud"]
+        },
+        {
+            description: "Warm resinous amber with hints of dry wood and smoldering oud essence",
+            correctAnswer: "Amber Flame",
+            options: ["Royal Amber", "Desert Rose", "Midnight Oud", "Amber Flame"]
+        },
+        {
+            description: "Deep Arabian oud with smoky notes and precious spice undertones",
+            correctAnswer: "Midnight Oud",
+            options: ["Amber Flame", "Desert Rose", "Midnight Oud", "Royal Amber"]
+        }
+    ];
+
+    // GAME STATE VARIABLES
+    // These track the current game progress and player performance
+    let currentQuestion = 0;  // Which question the player is on (0-4)
+    let score = 0;            // Total points earned
+    let streak = 0;           // Number of consecutive correct answers
+    let questions = [];       // Will store shuffled questions for this game session
+
+    // INITIALIZE THE GAME
+    // Sets up a new game when the page loads or when restarting
+    function initGame() {
+        // Shuffle the questions so they appear in random order each game
+        questions = [...perfumeQuiz].sort(() => Math.random() - 0.5);
+        
+        // Reset game progress - start from first question with zero score
+        currentQuestion = 0;
+        score = 0;
+        streak = 0;
+        
+        // Update the score display and load the first question
+        updateStats();
+        loadQuestion();
+    }
+
+    // LOAD A QUESTION
+    // Displays the current question and answer options on screen
+    function loadQuestion() {
+        // Check if we've reached the end of the quiz
+        if (currentQuestion >= questions.length) {
+            endGame();  // Show final results
+            return;
+        }
+
+        // Get the current question data
+        const question = questions[currentQuestion];
+        
+        // Display the perfume description for the player to read
+        document.getElementById('scentDescription').textContent = question.description;
+        
+        // Shuffle the answer options so correct answer isn't always in same position
+        const shuffledOptions = [...question.options].sort(() => Math.random() - 0.5);
+        
+        // Display the shuffled options on the four answer buttons
+        document.getElementById('choice1').textContent = shuffledOptions[0];
+        document.getElementById('choice2').textContent = shuffledOptions[1];
+        document.getElementById('choice3').textContent = shuffledOptions[2];
+        document.getElementById('choice4').textContent = shuffledOptions[3];
+        
+        // Reset the UI for a new question
+        document.getElementById('resultAlert').style.display = 'none';  // Hide previous result
+        document.getElementById('nextBtn').style.display = 'none';      // Hide next button
+        
+        // Enable all answer buttons and reset their appearance
+        document.querySelectorAll('.choice-btn').forEach(btn => {
+            btn.disabled = false;  // Make buttons clickable again
+            // Remove any color classes from previous question
+            btn.classList.remove('btn-success', 'btn-danger', 'btn-secondary');
+            // Set back to default blue outline
+            btn.classList.add('btn-outline-primary');
+        });
+    }
+
+    // CHECK IF ANSWER IS CORRECT
+    // Called when player clicks an answer button
+    function checkAnswer(choiceIndex) {
+        const question = questions[currentQuestion];
+        // Get the button that was clicked and the text on it
+        const selectedButton = document.querySelectorAll('.choice-btn')[choiceIndex];
+        const selectedAnswer = selectedButton.textContent.trim();
+        
+        // Disable all buttons so player can't change answer after clicking
+        document.querySelectorAll('.choice-btn').forEach(btn => {
+            btn.disabled = true;
+        });
+        
+        // Get references to the result display elements
+        const resultAlert = document.getElementById('resultAlert');
+        const resultMessage = document.getElementById('resultMessage');
+        
+        // Check if the selected answer matches the correct one
+        if (selectedAnswer === question.correctAnswer) {
+            // CORRECT ANSWER - Player guessed right!
+            
+            // Change button color to green to show it was correct
+            selectedButton.classList.remove('btn-outline-primary');
+            selectedButton.classList.add('btn-success');
+            
+            // Award points and increase streak
+            score += 10;   // 10 points for correct answer
+            streak += 1;   // Increase consecutive correct count
+            
+            // Show success message with the correct perfume name
+            resultMessage.textContent = `Correct! 🎉 It's ${question.correctAnswer}`;
+            resultAlert.className = 'alert alert-success text-center';
+            
+        } else {
+            // WRONG ANSWER - Player guessed incorrectly
+            
+            // Change selected button to red to show it was wrong
+            selectedButton.classList.remove('btn-outline-primary');
+            selectedButton.classList.add('btn-danger');
+            
+            // Reset streak counter (consecutive correct answers)
+            streak = 0;
+            
+            // Highlight the correct answer in green so player can learn
+            document.querySelectorAll('.choice-btn').forEach(btn => {
+                if (btn.textContent.trim() === question.correctAnswer) {
+                    btn.classList.remove('btn-outline-primary');
+                    btn.classList.add('btn-success');
+                }
+            });
+            
+            // Show failure message with the correct answer
+            resultMessage.textContent = `Wrong! The correct answer is ${question.correctAnswer}`;
+            resultAlert.className = 'alert alert-danger text-center';
+        }
+        
+        // Show the result message and enable the "Next Question" button
+        resultAlert.style.display = 'block';
+        document.getElementById('nextBtn').style.display = 'inline-block';
+        
+        // Update the score display with new values
+        updateStats();
+    }
+
+    // MOVE TO NEXT QUESTION
+    // Called when player clicks "Next Question" button
+    function nextQuestion() {
+        currentQuestion++;  // Advance to the next question
+        updateStats();      // Update round counter display
+        loadQuestion();     // Load and display the new question
+    }
+
+    // UPDATE GAME STATISTICS
+    // Refreshes the score, round, and streak displays
+    function updateStats() {
+        document.getElementById('score').textContent = score;  // Show current total score
+        // Show current progress (e.g., "2/5" for second question out of five)
+        document.getElementById('round').textContent = `${currentQuestion + 1}/${questions.length}`;
+        document.getElementById('streak').textContent = streak;  // Show consecutive correct count
+    }
+
+    // END THE GAME
+    // Called when all questions have been answered
+    function endGame() {
+        // Replace question text with completion message
+        document.getElementById('scentDescription').textContent = 'Game Complete! 🎉';
+        
+        // Show final results in a blue info box
+        document.getElementById('resultAlert').style.display = 'block';
+        document.getElementById('resultAlert').className = 'alert alert-info text-center';
+        document.getElementById('resultMessage').textContent = `Final Score: ${score} points!`;
+        
+        // Hide the answer choices since game is over
+        document.querySelectorAll('.choice-btn').forEach(btn => {
+            btn.style.display = 'none';
+        });
+        
+        // Hide the "Next Question" button
+        document.getElementById('nextBtn').style.display = 'none';
+        
+        // Create and show a "Play Again" button
+        const restartBtn = document.createElement('button');
+        restartBtn.className = 'btn btn-primary btn-lg';
+        restartBtn.textContent = 'Play Again';
+        
+        // When clicked, reset the game and start over
+        restartBtn.onclick = () => {
+            // Remove the restart button
+            document.querySelector('.text-center').removeChild(restartBtn);
+            // Show the answer buttons again
+            document.querySelectorAll('.choice-btn').forEach(btn => {
+                btn.style.display = 'block';
+            });
+            // Start a new game
+            initGame();
+        };
+        
+        // Add the restart button to the page
+        document.querySelector('.text-center').appendChild(restartBtn);
+    }
+
+    // START THE GAME WHEN PAGE LOADS
+    // This automatically begins the game when someone visits the page
+    document.addEventListener('DOMContentLoaded', initGame);
+</script>

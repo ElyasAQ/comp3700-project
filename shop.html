@@ -3,316 +3,361 @@
 <head>
     <meta charset="UTF-8">
     <title>Nasagh Collection – Luxury Arabian Perfumes</title>
-    <link rel="stylesheet" href="style.css">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.0/font/bootstrap-icons.css">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Cormorant+Garamond:wght@300;400;500;600&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
 </head>
-<body>
-
-<!-- Shared Header -->
-<header>
-    <div class="container">
-        <div class="logo">
-            <img src="images/oud1 - Copy-Recovered.png" alt="Nasagh Logo" class="header-logo">
-            <p class="logo-tagline">Timeless Essence of Oud</p>
-        </div>
-        <nav>
-            <ul>
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="shop.html">Collection</a></li>
-                    <li><a href="about.html">Our Story</a></li>
-                    <li><a href="contact.html">Contact</a></li>
-                    <li><a href="account.html">Account</a></li>
-                    <li><a href="cart.html">Cart</a></li>
-            </ul>
-        </nav>
-    </div>
-</header>
-
-<main id="main-content">
-
-    <section class="content-box fade-in">
-        <h2>Our Curated Collection</h2>
-        <p>
-            Explore a refined selection of Arabian oud perfumes, crafted for those who seek depth,
-            elegance, and long-lasting aroma. Use the filters below to find your perfect scent.
-        </p>
-
-        <!-- Filter / Search Form (to httpbin) -->
-        <form action="https://httpbin.org/get" method="get" class="fade-in" style="margin-top: 30px;">
-            <fieldset>
-                <legend>Find Your Fragrance</legend>
-
-                <div class="form-group">
-                    <label for="search">Search by Name</label>
-                    <input type="text" id="search" name="q" placeholder="Midnight Oud, Desert Rose..." />
+<body class="bg-light">
+    <!-- Navigation Bar -->
+    <nav class="navbar navbar-expand-lg navbar-white bg-white fixed-top shadow-sm">
+        <div class="container">
+            <a class="navbar-brand d-flex align-items-center" href="index.html">
+                <img src="images/oud1 - Copy-Recovered.png" alt="Nasagh Logo" height="50" class="me-2">
+                <div class="d-flex flex-column">
+                    <span class="fw-bold fs-4">NASAGH</span>
+                    <small class="text-muted fst-italic">Timeless Essence of Oud</small>
                 </div>
-
-                <div class="form-group">
-                    <label for="family">Fragrance Family</label>
-                    <select id="family" name="family" required>
-                        <option value="">Select family...</option>
-                        <option value="oud">Oud / Woody</option>
-                        <option value="floral">Floral</option>
-                        <option value="amber">Amber</option>
-                        <option value="musk">Musk</option>
-                        <option value="fresh">Fresh / Citrus</option>
-                    </select>
-                </div>
-
-                <div class="form-group">
-                    <label>Intensity</label>
-                    <label><input type="radio" name="intensity" value="soft" checked> Soft</label>
-                    <label><input type="radio" name="intensity" value="moderate"> Moderate</label>
-                    <label><input type="radio" name="intensity" value="strong"> Strong</label>
-                </div>
-
-                <div class="form-group">
-                    <label for="price">Maximum Price (OMR)</label>
-                    <input type="range" id="price" name="max_price" min="10" max="50" value="30">
-                </div>
-
-                <button type="submit">Apply Filters</button>
-            </fieldset>
-        </form>
-    </section>
-
-    <!-- Products Grid -->
-    <section class="highlight-section card-shadow" style="margin-top: 50px;">
-        <h2 class="elegant-text" style="margin-bottom: 30px;">Featured Oud Creations</h2>
-
-            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 30px; margin-top: 30px;">
-
-            <!-- Product Card 1 -->
-            <article class="card-shadow" style="background: white; padding: 25px;">
-                <div class="product-image">
-                    <img src="images/3145891074604_bottle.jpg.jpeg" alt="Desert Rose perfume">
-                </div>
-                <h3>Desert Rose</h3>
-                <p>Delicate rose petals blended with jasmine and a soft oud base.</p>
-                <ul class="features-list">
-                    <li>Family: Floral / Oriental</li>
-                    <li>Longevity: 8–10 hours</li>
-                    <li>Best for: Daytime & events</li>
-                </ul>
-                <p style="margin-top: 15px; font-weight: 600;">Price: 22 OMR</p>
-                <a href="product-detail.html" class="smooth-transition" style="text-decoration:none; display:inline-block; margin-top:10px; color:#D4A574;">View Details →</a>
-            </article>
-
-
-            <!-- Product Card 2 -->
-            <article class="card-shadow" style="background: white; padding: 25px;">
-                <div class="product-image">
-                    <img src="images/3145891144604_bottle.jpg.jpeg" alt="Desert Rose perfume">
-                </div>
-                <h3>Desert Rose</h3>
-                <p>Delicate rose petals blended with jasmine and a soft oud base.</p>
-                <ul class="features-list">
-                    <li>Family: Floral / Oriental</li>
-                    <li>Longevity: 8–10 hours</li>
-                    <li>Best for: Daytime & events</li>
-                </ul>
-                <p style="margin-top: 15px; font-weight: 600;">Price: 22 OMR</p>
-                <a href="product-detail.html" class="smooth-transition" style="text-decoration:none; display:inline-block; margin-top:10px; color:#D4A574;">View Details →</a>
-            </article>
-
-            <!-- Product Card 3 -->
-            <article class="card-shadow" style="background: white; padding: 25px;">
-                <div class="product-image">
-                    <img src="images/product_id2404product_image_1381_1660747071.jpg.jpeg" alt="Desert Rose perfume">
-                </div>
-                <h3>Royal Amber</h3>
-                <p>Opulent amber fused with musk and sandalwood for a royal trail.</p>
-                <ul class="features-list">
-                    <li>Family: Amber / Resinous</li>
-                    <li>Longevity: 12+ hours</li>
-                    <li>Best for: Winter & formal gatherings</li>
-                </ul>
-                <p style="margin-top: 15px; font-weight: 600;">Price: 30 OMR</p>
-                <a href="product-detail.html" class="smooth-transition" style="text-decoration:none; display:inline-block; margin-top:10px; color:#D4A574;">View Details →</a>
-            </article>
-
-            <!-- Product Card 4 -->
-            <article class="card-shadow" style="background: white; padding: 25px;">
-                <div class="product-image">
-                    <img src="images/CH65167832__13729.jpg.jpeg" alt="Desert Rose perfume">
-                </div>
-                <h3>Amber Flame</h3>
-                <p>Warm resinous amber with hints of dry wood and smoldering oud.</p>
-                <ul class="features-list">
-                    <li>Family: Amber</li>
-                    <li>Longevity: 10–12 hours</li>
-                    <li>Best for: Cozy evenings</li>
-                </ul>
-                <p style="margin-top: 15px; font-weight: 600;">Price: 28 OMR</p>
-                <a href="product-detail.html" class="smooth-transition" style="text-decoration:none; display:inline-block; margin-top:10px; color:#D4A574;">View Details →</a>
-            </article>
-
-            <!-- Product Card 5 -->
-            <article class="card-shadow" style="background: white; padding: 25px;">
-                <div class="product-image">
-                    <img src="images/HERMES_TERRE_D_PURE_PERFUME_200ML_BB.webp.jpeg" alt="Desert Rose perfume">
-                </div>
-                <h3>White Saffron</h3>
-                <p>Saffron-infused oud with light jasmine whispers and a noble finish.</p>
-                <ul class="features-list">
-                    <li>Family: Oriental / Floral</li>
-                    <li>Longevity: 9–11 hours</li>
-                    <li>Best for: Elegant occasions</li>
-                </ul>
-                <p style="margin-top: 15px; font-weight: 600;">Price: 27 OMR</p>
-                <a href="product-detail.html" class="smooth-transition" style="text-decoration:none; display:inline-block; margin-top:10px; color:#D4A574;">View Details →</a>
-            </article>
-
-            <!-- Product Card 6 -->
-            <article class="card-shadow" style="background: white; padding: 25px;">
-                <div class="product-image">
-                    <img src="images/product_image_1182_1647844138.jpg.jpeg" alt="Desert Rose perfume">
-                </div>
-                <h3>Musk Antique</h3>
-                <p>Classic Arabian musk blended with rare oud and woody softness.</p>
-                <ul class="features-list">
-                    <li>Family: Musk / Oud</li>
-                    <li>Longevity: 8–10 hours</li>
-                    <li>Best for: Everyday elegance</li>
-                </ul>
-                <p style="margin-top: 15px; font-weight: 600;">Price: 24 OMR</p>
-                <a href="product-detail.html" class="smooth-transition" style="text-decoration:none; display:inline-block; margin-top:10px; color:#D4A574;">View Details →</a>
-            </article>
-
-            <!-- Product Card 7 -->
-            <article class="card-shadow" style="background: white; padding: 25px;">
-                <div class="product-image">
-                    <img src="images/product_image_1183_1647844140.jpg.jpeg" alt="Desert Rose perfume">
-                </div>
-                <h3>Celestial Oud</h3>
-                <p>An ethereal oud blend with spices and soft incense.</p>
-                <ul class="features-list">
-                    <li>Family: Woody / Spicy</li>
-                    <li>Longevity: 11–13 hours</li>
-                    <li>Best for: Festivals & gatherings</li>
-                </ul>
-                <p style="margin-top: 15px; font-weight: 600;">Price: 32 OMR</p>
-                <a href="product-detail.html" class="smooth-transition" style="text-decoration:none; display:inline-block; margin-top:10px; color:#D4A574;">View Details →</a>
-            </article>
-
-            <!-- Product Card 8 -->
-            <article class="card-shadow" style="background: white; padding: 25px;">
-                <div class="product-image">
-                    <img src="images/product_image_718_1647843270.jpg.jpeg" alt="Desert Rose perfume">
-                </div>
-                <h3>Desert Winds</h3>
-                <p>A fresh oud accord with airy botanicals and citrus burst.</p>
-                <ul class="features-list">
-                    <li>Family: Fresh / Oud</li>
-                    <li>Longevity: 7–9 hours</li>
-                    <li>Best for: Daytime & outdoor wear</li>
-                </ul>
-                <p style="margin-top: 15px; font-weight: 600;">Price: 21 OMR</p>
-                <a href="product-detail.html" class="smooth-transition" style="text-decoration:none; display:inline-block; margin-top:10px; color:#D4A574;">View Details →</a>
-            </article>
-
-            <!-- Product Card 9 -->
-            <article class="card-shadow" style="background: white; padding: 25px;">
-                <div class="product-image">
-                    <img src="images/Untitleddesign-2023-07-16T125855.659.webp.jpeg" alt="Desert Rose perfume">
-                </div>
-                <h3>Sultan’s Oud</h3>
-                <p>The king of oud scents: regal, deep, and long-lasting with spice hints.</p>
-                <ul class="features-list">
-                    <li>Family: Oud / Amber</li>
-                    <li>Longevity: 14+ hours</li>
-                    <li>Best for: Royal nights</li>
-                </ul>
-                <p style="margin-top: 15px; font-weight: 600;">Price: 35 OMR</p>
-                <a href="product-detail.html" class="smooth-transition" style="text-decoration:none; display:inline-block; margin-top:10px; color:#D4A574;">View Details →</a>
-            </article>
-
-            <article class="card-shadow" style="background: white; padding: 25px;">
-                <div class="product-image">
-                    <img src="images/WhatsApp_Image_2025-05-04_at_22.39.40_88b1f40b.jpg.jpeg" alt="Desert Rose perfume">
-                </div>                
-                <h3>Velvet Oud</h3>
-                <p>Rich oud wrapped in velvety roses and creamy musk.</p>
-                <ul class="features-list">
-                    <li>Family: Oud / Floral</li>
-                    <li>Longevity: 11–12 hours</li>
-                    <li>Best for: Formal evenings</li>
-                </ul>
-                <p style="margin-top: 15px; font-weight: 600;">Price: 29 OMR</p>
-                <a href="product-detail.html" class="smooth-transition" style="text-decoration:none; display:inline-block; margin-top:10px; color:#D4A574;">View Details →</a>
-            </article>
-
-            <!-- Product Card 11 -->
-            <article class="card-shadow" style="background: white; padding: 25px;">
-                <div class="product-image">
-                    <img src="images/WhatsAppImage2024-09-17at10.52.17_a6b9be7a.jpg.jpeg" alt="Desert Rose perfume">
-                </div>                
-                <h3>Oasis Mist</h3>
-                <p>Fresh oasis breeze with subtle oud and green florals.</p>
-                <ul class="features-list">
-                    <li>Family: Fresh / Floral</li>
-                    <li>Longevity: 7–8 hours</li>
-                    <li>Best for: Daytime in warm seasons</li>
-                </ul>
-                <p style="margin-top: 15px; font-weight: 600;">Price: 21 OMR</p>
-                <a href="product-detail.html" class="smooth-transition" style="text-decoration:none; display:inline-block; margin-top:10px; color:#D4A574;">View Details →</a>
-            </article>
-
-            <!-- Product Card 12 -->
-            <article class="card-shadow" style="background: white; padding: 25px;">
-                <div class="product-image">
-                    <img src="images/8435415030885.jpg.jpeg" alt="Desert Rose perfume">
-                </div>                
-                <h3>Opulent Sands</h3>
-                <p>Golden saffron mingles with creamy amber and intense oud.</p>
-                <ul class="features-list">
-                    <li>Family: Oriental / Amber</li>
-                    <li>Longevity: 13+ hours</li>
-                    <li>Best for: Nights and celebrations</li>
-                </ul>
-                <p style="margin-top: 15px; font-weight: 600;">Price: 33 OMR</p>
-                <a href="product-detail.html" class="smooth-transition" style="text-decoration:none; display:inline-block; margin-top:10px; color:#D4A574;">View Details →</a>
-            </article>
-
-        </div>
-
-    </section>
-
-</main>
-
-<!-- Shared Footer -->
-<footer>
-    <div class="container">
-        <div class="footer-content">
-            <div class="footer-section">
-                <h3>نسغ Nasagh</h3>
-                <p>Timeless Arabian Perfumes</p>
-                <p style="margin-top: 15px; font-size: 0.9em;">Crafting olfactory excellence since 2022</p>
-            </div>
-            <div class="footer-section">
-                <h4>Explore</h4>
-                <ul>
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="shop.html">Collection</a></li>
-                    <li><a href="about.html">Our Story</a></li>
-                    <li><a href="contact.html">Contact</a></li>
-                    <li><a href="cart.html">Cart</a></li>
-                    <li><a href="newsletter.html">Newsletter</a></li>
+            </a>
+            
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link active fw-bold" href="shop.html">Collection</a></li>
+                    <li class="nav-item"><a class="nav-link" href="about.html">Our Story</a></li>
+                    <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+                    <li class="nav-item"><a class="nav-link" href="account.html">Account</a></li>
+                    <li class="nav-item"><a class="nav-link" href="cart.html">Cart</a></li>
+                    <li class="nav-item"><a class="nav-link" href="questionnaire.html">Questionnaire</a></li>
+                    <li class="nav-item"><a class="nav-link" href="calculate.html">Calculator</a></li>
+                    <li class="nav-item"><a class="nav-link" href="funpage.html">Fun Page</a></li>
                 </ul>
             </div>
-            <div class="footer-section">
-                <h4>Connect</h4>
-                <p>Email: s150229@student.squ.edu.om</p>
-                <p>Phone: +968 71183928</p>
-                <p>Muscat, Sultanate of Oman</p>
+        </div>
+    </nav>
+
+    <main class="container mt-5 pt-5">
+        <!-- Collection Header -->
+        <section class="card border-0 shadow mb-5">
+            <div class="card-body p-4 p-md-5">
+                <h1 class="text-center mb-4 display-5 fw-bold text-dark">Our Curated Collection</h1>
+                <p class="text-center lead text-secondary">
+                    Explore a refined selection of Arabian oud perfumes, crafted for those who seek depth,
+                    elegance, and long-lasting aroma.
+                </p>
+
+                <!-- Add New Product Form -->
+                <div class="card border-primary mb-4">
+                    <div class="card-header bg-primary text-white">
+                        <h5 class="mb-0"><i class="bi bi-plus-circle me-2"></i>Add New Product</h5>
+                    </div>
+                    <div class="card-body">
+                        <form id="addProductForm" class="row g-3">
+                            <div class="col-md-3">
+                                <label for="productName" class="form-label">Product Name</label>
+                                <input type="text" class="form-control" id="productName" required>
+                            </div>
+                            <div class="col-md-2">
+                                <label for="productPrice" class="form-label">Price (OMR)</label>
+                                <input type="number" class="form-control" id="productPrice" step="0.01" required>
+                            </div>
+                            <div class="col-md-3">
+                                <label for="productFamily" class="form-label">Fragrance Family</label>
+                                <select class="form-select" id="productFamily" required>
+                                    <option value="">Select family...</option>
+                                    <option value="Oud / Woody">Oud / Woody</option>
+                                    <option value="Floral">Floral</option>
+                                    <option value="Amber">Amber</option>
+                                    <option value="Musk">Musk</option>
+                                    <option value="Fresh / Citrus">Fresh / Citrus</option>
+                                </select>
+                            </div>
+                            <div class="col-md-2">
+                                <label for="productLongevity" class="form-label">Longevity</label>
+                                <input type="text" class="form-control" id="productLongevity" placeholder="8-10 hours" required>
+                            </div>
+                            <div class="col-md-2">
+                                <label for="productBestFor" class="form-label">Best For</label>
+                                <input type="text" class="form-control" id="productBestFor" placeholder="Daytime & events" required>
+                            </div>
+                            <div class="col-12">
+                                <label for="productDescription" class="form-label">Description</label>
+                                <textarea class="form-control" id="productDescription" rows="2" required></textarea>
+                            </div>
+                            <div class="col-12">
+                                <label for="productImage" class="form-label">Image URL</label>
+                                <input type="text" class="form-control" id="productImage" placeholder="images/product.jpg" required>
+                            </div>
+                            <div class="col-12 text-center">
+                                <button type="submit" class="btn btn-success me-2">Add Product</button>
+                                <button type="reset" class="btn btn-outline-secondary">Clear</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+
+                <!-- Search Products Form -->
+                <div class="card border-warning mb-4">
+                    <div class="card-header bg-warning text-dark">
+                        <h5 class="mb-0"><i class="bi bi-search me-2"></i>Search Products</h5>
+                    </div>
+                    <div class="card-body">
+                        <form id="searchProductForm" class="row g-3">
+                            <div class="col-md-6">
+                                <label for="searchName" class="form-label">Search by Name</label>
+                                <input type="text" class="form-control" id="searchName" placeholder="Enter product name...">
+                            </div>
+                            <div class="col-md-4">
+                                <label for="searchFamily" class="form-label">Filter by Family</label>
+                                <select class="form-select" id="searchFamily">
+                                    <option value="">All Families</option>
+                                    <option value="Oud / Woody">Oud / Woody</option>
+                                    <option value="Floral">Floral</option>
+                                    <option value="Amber">Amber</option>
+                                    <option value="Musk">Musk</option>
+                                    <option value="Fresh / Citrus">Fresh / Citrus</option>
+                                </select>
+                            </div>
+                            <div class="col-md-2 d-flex align-items-end">
+                                <button type="submit" class="btn btn-warning w-100">Search</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+
+                <!-- Original Filter Form -->
+                <form action="https://httpbin.org/get" method="get" class="mt-4">
+                    <div class="row g-3">
+                        <div class="col-md-4">
+                            <label for="search" class="form-label fw-semibold">Search by Name</label>
+                            <input type="text" class="form-control border-secondary" id="search" name="q" placeholder="Midnight Oud, Desert Rose...">
+                        </div>
+                        
+                        <div class="col-md-4">
+                            <label for="family" class="form-label fw-semibold">Fragrance Family</label>
+                            <select class="form-select border-secondary" id="family" name="family" required>
+                                <option value="">Select family...</option>
+                                <option value="oud">Oud / Woody</option>
+                                <option value="floral">Floral</option>
+                                <option value="amber">Amber</option>
+                                <option value="musk">Musk</option>
+                                <option value="fresh">Fresh / Citrus</option>
+                            </select>
+                        </div>
+                        
+                        <div class="col-md-4">
+                            <label class="form-label fw-semibold">Intensity</label>
+                            <div class="d-flex gap-3">
+                                <div class="form-check">
+                                    <input class="form-check-input" type="radio" name="intensity" id="soft" value="soft" checked>
+                                    <label class="form-check-label" for="soft">Soft</label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="radio" name="intensity" id="moderate" value="moderate">
+                                    <label class="form-check-label" for="moderate">Moderate</label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="radio" name="intensity" id="strong" value="strong">
+                                    <label class="form-check-label" for="strong">Strong</label>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="col-12">
+                            <label for="price" class="form-label fw-semibold">Maximum Price (OMR): <span id="priceValue" class="text-primary">30</span></label>
+                            <input type="range" class="form-range" id="price" name="max_price" min="10" max="50" value="30">
+                        </div>
+                        
+                        <div class="col-12 text-center">
+                            <button type="submit" class="btn btn-dark btn-lg px-5">Apply Filters</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </section>
+
+        <!-- Products Grid -->
+        <section class="mb-5">
+            <h2 class="text-center mb-5 display-5 fw-bold text-dark">Featured Oud Creations</h2>
+
+            <div id="productsContainer" class="row g-4">
+                <!-- Products will be dynamically inserted here by JavaScript -->
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-dark text-light pt-5 mt-5">
+        <div class="container">
+            <div class="row g-4">
+                <div class="col-lg-4">
+                    <h5 class="fw-bold">نسغ Nasagh</h5>
+                    <p>Timeless Arabian Perfumes</p>
+                    <p class="small text-secondary">Crafting olfactory excellence since 2022</p>
+                </div>
+                <div class="col-lg-4">
+                    <h5>Explore</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="index.html" class="text-light text-decoration-none">Home</a></li>
+                        <li><a href="shop.html" class="text-light text-decoration-none">Collection</a></li>
+                        <li><a href="about.html" class="text-light text-decoration-none">Our Story</a></li>
+                        <li><a href="contact.html" class="text-light text-decoration-none">Contact</a></li>
+                        <li><a href="cart.html" class="text-light text-decoration-none">Cart</a></li>
+                        <li><a href="newsletter.html" class="text-light text-decoration-none">Newsletter</a></li>
+                        
+                    </ul>
+                </div>
+                <div class="col-lg-4">
+                    <h5>Connect</h5>
+                    <p>Email: s150229@student.squ.edu.om</p>
+                    <p>Phone: +968 71183928</p>
+                    <p>Muscat, Sultanate of Oman</p>
+                </div>
+            </div>
+            <div class="row mt-4 pt-4 border-top border-secondary">
+                <div class="col-12 text-center">
+                    <p class="mb-0">&copy; 2025 Nasagh Inc. All rights reserved. | Crafted by WEB Crafters Team</p>
+                </div>
             </div>
         </div>
-        <div class="footer-bottom">
-            <p>&copy; 2025 Nasagh Inc. All rights reserved. | Crafted by WEB Crafters Team</p>
-        </div>
-    </div>
-</footer>
+    </footer>
 
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    
+    <!-- JavaScript for Dynamic Product Management -->
+    <script>
+        // Product Constructor Function
+        function Product(name, price, family, longevity, bestFor, description, image) {
+            this.name = name;
+            this.price = price;
+            this.family = family;
+            this.longevity = longevity;
+            this.bestFor = bestFor;
+            this.description = description;
+            this.image = image;
+        }
+
+        // Initial Products Array
+        const products = [
+            new Product(
+                "Desert Rose",
+                22,
+                "Floral / Oriental",
+                "8–10 hours",
+                "Daytime & events",
+                "Delicate rose petals blended with jasmine and a soft oud base.",
+                "images/3145891074604_bottle.jpg.jpeg"
+            ),
+            new Product(
+                "Royal Amber",
+                30,
+                "Amber / Resinous",
+                "12+ hours",
+                "Winter & formal gatherings",
+                "Opulent amber fused with musk and sandalwood for a royal trail.",
+                "images/product_id2404product_image_1381_1660747071.jpg.jpeg"
+            ),
+            new Product(
+                "Amber Flame",
+                28,
+                "Amber",
+                "10–12 hours",
+                "Cozy evenings",
+                "Warm resinous amber with hints of dry wood and smoldering oud.",
+                "images/CH65167832__13729.jpg.jpeg"
+            )
+        ];
+
+        // Function to display all products
+        function displayProducts(productsArray = products) {
+            const container = document.getElementById('productsContainer');
+            container.innerHTML = '';
+
+            productsArray.forEach(product => {
+                const productHTML = `
+                    <div class="col-lg-4 col-md-6">
+                        <div class="card h-100 shadow-sm border-0">
+                            <div class="bg-light d-flex align-items-center justify-content-center" style="height: 250px;">
+                                <img src="${product.image}" alt="${product.name} perfume" class="img-fluid" style="max-height: 200px;">
+                            </div>
+                            <div class="card-body d-flex flex-column">
+                                <h5 class="card-title fw-bold">${product.name}</h5>
+                                <p class="card-text text-secondary">${product.description}</p>
+                                <ul class="list-unstyled small text-muted">
+                                    <li><i class="bi bi-diamond-fill text-warning me-2"></i>Family: ${product.family}</li>
+                                    <li><i class="bi bi-diamond-fill text-warning me-2"></i>Longevity: ${product.longevity}</li>
+                                    <li><i class="bi bi-diamond-fill text-warning me-2"></i>Best for: ${product.bestFor}</li>
+                                </ul>
+                                <div class="d-flex justify-content-between align-items-center mt-auto">
+                                    <span class="h5 fw-bold text-primary mb-0">${product.price} OMR</span>
+                                    <a href="product-detail.html" class="btn btn-outline-dark btn-sm">View Details</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                `;
+                container.innerHTML += productHTML;
+            });
+        }
+
+        // Function to add new product
+        function addProduct(event) {
+            event.preventDefault();
+            
+            const name = document.getElementById('productName').value;
+            const price = parseFloat(document.getElementById('productPrice').value);
+            const family = document.getElementById('productFamily').value;
+            const longevity = document.getElementById('productLongevity').value;
+            const bestFor = document.getElementById('productBestFor').value;
+            const description = document.getElementById('productDescription').value;
+            const image = document.getElementById('productImage').value;
+
+            const newProduct = new Product(name, price, family, longevity, bestFor, description, image);
+            products.push(newProduct);
+            
+            displayProducts();
+            document.getElementById('addProductForm').reset();
+            
+            // Show success message
+            alert('Product added successfully!');
+        }
+
+        // Function to search products
+        function searchProducts(event) {
+            event.preventDefault();
+            
+            const searchName = document.getElementById('searchName').value.toLowerCase();
+            const searchFamily = document.getElementById('searchFamily').value;
+            
+            const filteredProducts = products.filter(product => {
+                const matchesName = product.name.toLowerCase().includes(searchName);
+                const matchesFamily = !searchFamily || product.family === searchFamily;
+                return matchesName && matchesFamily;
+            });
+            
+            displayProducts(filteredProducts);
+        }
+
+        // Event Listeners
+        document.getElementById('addProductForm').addEventListener('submit', addProduct);
+        document.getElementById('searchProductForm').addEventListener('submit', searchProducts);
+
+        // Initialize display
+        displayProducts();
+
+        // Price range display (original functionality)
+        document.getElementById('price').addEventListener('input', function() {
+            document.getElementById('priceValue').textContent = this.value;
+        });
+    </script>
 </body>
 </html>
+
 

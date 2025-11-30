@@ -3,109 +3,443 @@
 <head>
     <meta charset="UTF-8">
     <title>Contact Us – Nasagh</title>
-    <link rel="stylesheet" href="style.css">
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.0/font/bootstrap-icons.css">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
-<body>
-
-<header>
-    <div class="container">
-        <div class="logo">
-            <img src="images/oud1 - Copy-Recovered.png" alt="Nasagh Logo" class="header-logo">
-            <p class="logo-tagline">Timeless Essence of Oud</p>
-        </div>
-        <nav>
-            <ul>
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="shop.html">Collection</a></li>
-                    <li><a href="about.html">Our Story</a></li>
-                    <li><a href="contact.html">Contact</a></li>
-                    <li><a href="account.html">Account</a></li>
-                    <li><a href="cart.html">Cart</a></li>
-            </ul>
-        </nav>
-    </div>
-</header>
-
-<main id="main-content">
-
-    <section class="content-box fade-in">
-        <h2>Contact Us</h2>
-        <p>
-            We are happy to assist you with product questions, bulk orders, or fragrance recommendations.
-            Please fill the form below and we will reach back to you.
-        </p>
-
-        <!-- Contact Form – mailto sends to email -->
-        <form action="mailto:s150229@student.squ.edu.om" method="post" enctype="text/plain" style="margin-top: 25px;">
-            <fieldset>
-                <legend>Send Us a Message</legend>
-
-                <div class="form-group">
-                    <label for="name">Full Name</label>
-                    <input type="text" id="name" name="Name" required>
+<body class="bg-light">
+    <!-- Navigation Bar -->
+    <nav class="navbar navbar-expand-lg navbar-white bg-white fixed-top shadow-sm">
+        <div class="container">
+            <a class="navbar-brand d-flex align-items-center" href="index.html">
+                <img src="images/oud1 - Copy-Recovered.png" alt="Nasagh Logo" height="50" class="me-2">
+                <div class="d-flex flex-column">
+                    <span class="fw-bold fs-4">NASAGH</span>
+                    <small class="text-muted fst-italic">Timeless Essence of Oud</small>
                 </div>
-
-                <div class="form-group">
-                    <label for="email">Email Address</label>
-                    <input type="email" id="email" name="Email" required>
-                </div>
-
-                <div class="form-group">
-                    <label for="reason">Reason</label>
-                    <select id="reason" name="Reason" required>
-                        <option value="">Choose an option...</option>
-                        <option value="order">Order Support</option>
-                        <option value="wholesale">Wholesale / Collaboration</option>
-                        <option value="fragrance">Fragrance Recommendation</option>
-                        <option value="other">Other</option>
-                    </select>
-                </div>
-
-                <div class="form-group">
-                    <label for="message">Your Message</label>
-                    <textarea id="message" name="Message" rows="5" required></textarea>
-                </div>
-
-                <button type="submit">Send Message</button>
-            </fieldset>
-        </form>
-    </section>
-
-</main>
-
-<footer>
-    <div class="container">
-        <div class="footer-content">
-            <div class="footer-section">
-                <h3>نسغ Nasagh</h3>
-                <p>Timeless Arabian Perfumes</p>
-                <p style="margin-top: 15px; font-size: 0.9em;">Crafting olfactory excellence since 2022</p>
-            </div>
-            <div class="footer-section">
-                <h4>Explore</h4>
-                <ul>
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="shop.html">Collection</a></li>
-                    <li><a href="about.html">Our Story</a></li>
-                    <li><a href="contact.html">Contact</a></li>
-                    <li><a href="cart.html">Cart</a></li>
-                    <li><a href="newsletter.html">Newsletter</a></li>
+            </a>
+            
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="shop.html">Collection</a></li>
+                    <li class="nav-item"><a class="nav-link" href="about.html">Our Story</a></li>
+                    <li class="nav-item"><a class="nav-link active fw-bold" href="contact.html">Contact</a></li>
+                    <li class="nav-item"><a class="nav-link" href="account.html">Account</a></li>
+                    <li class="nav-item"><a class="nav-link" href="cart.html">Cart</a></li>
+                    <li class="nav-item"><a class="nav-link" href="questionnaire.html">Questionnaire</a></li>
+                    <li class="nav-item"><a class="nav-link" href="calculate.html">Calculator</a></li>
+                    <li class="nav-item"><a class="nav-link" href="funpage.html">Fun Page</a></li>
                 </ul>
             </div>
-            <div class="footer-section">
-                <h4>Connect</h4>
-                <p>Email: s150229@student.squ.edu.om</p>
-                <p>Phone: +968 71183928</p>
-                <p>Muscat, Sultanate of Oman</p>
+        </div>
+    </nav>
+
+    <main class="container mt-5 pt-5">
+        <!-- Contact Messages Display Section -->
+        <div class="card border-info mb-4">
+            <div class="card-header bg-info text-white d-flex justify-content-between align-items-center">
+                <h5 class="mb-0"><i class="bi bi-chat-dots me-2"></i>Recent Contact Messages</h5>
+                <button class="btn btn-outline-light btn-sm" data-bs-toggle="collapse" data-bs-target="#messagesCollapse">
+                    <i class="bi bi-chevron-down"></i>
+                </button>
+            </div>
+            <div class="collapse" id="messagesCollapse">
+                <div class="card-body">
+                    <div class="table-responsive">
+                        <table class="table table-striped table-hover">
+                            <thead class="table-dark">
+                                <tr>
+                                    <th>Name</th>
+                                    <th>Email</th>
+                                    <th>Reason</th>
+                                    <th>Message Preview</th>
+                                    <th>Date</th>
+                                </tr>
+                            </thead>
+                            <tbody id="messagesTableBody">
+                                <!-- Messages will be dynamically inserted here by JavaScript -->
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
             </div>
         </div>
-        <div class="footer-bottom">
-            <p>&copy; 2025 Nasagh Inc. All rights reserved. | Crafted by WEB Crafters Team</p>
+
+        <div class="card border-0 shadow">
+            <div class="card-body p-4 p-md-5">
+                <h1 class="text-center mb-4">Contact Us</h1>
+                <p class="text-center lead text-muted mb-4">
+                    We are happy to assist you with product questions, bulk orders, or fragrance recommendations.
+                    Please fill the form below and we will reach back to you.
+                </p>
+
+                <!-- Contact Form -->
+                <form id="contactForm" class="needs-validation" novalidate>
+                    <div class="row g-3">
+                        <div class="col-md-6">
+                            <label for="name" class="form-label">Full Name *</label>
+                            <input type="text" class="form-control" id="name" name="name" required 
+                                   pattern="[A-Za-z\s]{2,50}" 
+                                   title="Name should be 2-50 characters long and contain only letters">
+                            <div class="invalid-feedback">
+                                Please provide a valid name (2-50 letters only).
+                            </div>
+                        </div>
+
+                        <div class="col-md-6">
+                            <label for="email" class="form-label">Email Address *</label>
+                            <input type="email" class="form-control" id="email" name="email" required
+                                   pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$">
+                            <div class="invalid-feedback">
+                                Please provide a valid email address.
+                            </div>
+                        </div>
+
+                        <div class="col-md-6">
+                            <label for="phone" class="form-label">Phone Number</label>
+                            <input type="tel" class="form-control" id="phone" name="phone"
+                                   pattern="[\+]?[968]{3}[\s]?[0-9]{8}"
+                                   placeholder="+968 XX XXX XXX">
+                            <div class="invalid-feedback">
+                                Please provide a valid Omani phone number (e.g., +968 71183928).
+                            </div>
+                        </div>
+
+                        <div class="col-md-6">
+                            <label for="reason" class="form-label">Reason for Contact *</label>
+                            <select class="form-select" id="reason" name="reason" required>
+                                <option value="">Choose an option...</option>
+                                <option value="order">Order Support</option>
+                                <option value="wholesale">Wholesale / Collaboration</option>
+                                <option value="fragrance">Fragrance Recommendation</option>
+                                <option value="complaint">Complaint</option>
+                                <option value="other">Other</option>
+                            </select>
+                            <div class="invalid-feedback">
+                                Please select a reason for contact.
+                            </div>
+                        </div>
+
+                        <div class="col-12">
+                            <label for="urgency" class="form-label">Urgency Level</label>
+                            <div class="d-flex gap-3 flex-wrap">
+                                <div class="form-check">
+                                    <input class="form-check-input" type="radio" name="urgency" id="low" value="low" checked>
+                                    <label class="form-check-label" for="low">Low</label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="radio" name="urgency" id="medium" value="medium">
+                                    <label class="form-check-label" for="medium">Medium</label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="radio" name="urgency" id="high" value="high">
+                                    <label class="form-check-label" for="high">High</label>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-12">
+                            <label for="message" class="form-label">Your Message *</label>
+                            <textarea class="form-control" id="message" name="message" rows="5" required
+                                      minlength="10" maxlength="500"
+                                      placeholder="Please provide detailed information..."></textarea>
+                            <div class="form-text">
+                                Message must be between 10 and 500 characters. Currently: <span id="charCount">0</span>/500
+                            </div>
+                            <div class="invalid-feedback">
+                                Please provide a message between 10 and 500 characters.
+                            </div>
+                        </div>
+
+                        <div class="col-12">
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" id="newsletter" name="newsletter">
+                                <label class="form-check-label" for="newsletter">
+                                    Subscribe to our newsletter for updates and exclusive offers
+                                </label>
+                            </div>
+                        </div>
+
+                        <div class="col-12 text-center">
+                            <button type="submit" class="btn btn-primary btn-lg me-3">
+                                <i class="bi bi-send me-2"></i>Send Message
+                            </button>
+                            <button type="button" class="btn btn-outline-secondary btn-lg" data-bs-toggle="modal" data-bs-target="#quickHelpModal">
+                                <i class="bi bi-question-circle me-2"></i>Quick Help
+                            </button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+
+        <!-- Contact Information Cards -->
+        <div class="row mt-5 g-4">
+            <div class="col-md-4">
+                <div class="card text-center h-100 border-0 shadow-sm">
+                    <div class="card-body">
+                        <i class="bi bi-envelope-fill text-primary display-6 mb-3"></i>
+                        <h5>Email Us</h5>
+                        <p class="text-muted">s150229@student.squ.edu.om</p>
+                        <small>We respond within 24 hours</small>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card text-center h-100 border-0 shadow-sm">
+                    <div class="card-body">
+                        <i class="bi bi-telephone-fill text-primary display-6 mb-3"></i>
+                        <h5>Call Us</h5>
+                        <p class="text-muted">+968 71183928</p>
+                        <small>Mon-Fri, 9AM-5PM</small>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card text-center h-100 border-0 shadow-sm">
+                    <div class="card-body">
+                        <i class="bi bi-geo-alt-fill text-primary display-6 mb-3"></i>
+                        <h5>Visit Us</h5>
+                        <p class="text-muted">Muscat, Oman</p>
+                        <small>By appointment only</small>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Quick Help Modal -->
+    <div class="modal fade" id="quickHelpModal" tabindex="-1" aria-labelledby="quickHelpModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="quickHelpModalLabel">Quick Help & FAQ</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <h6>Common Questions:</h6>
+                    <ul class="list-unstyled">
+                        <li class="mb-2"><strong>Q:</strong> How long does shipping take?</li>
+                        <li class="mb-3"><strong>A:</strong> 3-5 business days within Oman</li>
+                        
+                        <li class="mb-2"><strong>Q:</strong> Do you offer international shipping?</li>
+                        <li class="mb-3"><strong>A:</strong> Yes, worldwide shipping available</li>
+                        
+                        <li class="mb-2"><strong>Q:</strong> Can I return a product?</li>
+                        <li><strong>A:</strong> 30-day return policy for unopened items</li>
+                    </ul>
+                    <div class="alert alert-info mt-3">
+                        <small>Can't find your answer? Fill out the contact form above and we'll help you personally.</small>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                </div>
+            </div>
         </div>
     </div>
-</footer>
 
+    <!-- Footer -->
+    <footer class="bg-dark text-light pt-5 mt-5">
+        <div class="container">
+            <div class="row g-4">
+                <div class="col-lg-4">
+                    <h5 class="fw-bold">نسغ Nasagh</h5>
+                    <p>Timeless Arabian Perfumes</p>
+                    <p class="small text-secondary">Crafting olfactory excellence since 2022</p>
+                </div>
+                <div class="col-lg-4">
+                    <h5>Explore</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="index.html" class="text-light text-decoration-none">Home</a></li>
+                        <li><a href="shop.html" class="text-light text-decoration-none">Collection</a></li>
+                        <li><a href="about.html" class="text-light text-decoration-none">Our Story</a></li>
+                        <li><a href="contact.html" class="text-light text-decoration-none">Contact</a></li>
+                        <li><a href="cart.html" class="text-light text-decoration-none">Cart</a></li>
+                        <li><a href="newsletter.html" class="text-light text-decoration-none">Newsletter</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-4">
+                    <h5>Connect</h5>
+                    <p>Email: s150229@student.squ.edu.om</p>
+                    <p>Phone: +968 71183928</p>
+                    <p>Muscat, Sultanate of Oman</p>
+                </div>
+            </div>
+            <div class="row mt-4 pt-4 border-top border-secondary">
+                <div class="col-12 text-center">
+                    <p class="mb-0">&copy; 2025 Nasagh Inc. All rights reserved. | Crafted by WEB Crafters Team</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    
+    <!-- JavaScript for Contact Form Validation and Dynamic Features -->
+    <script>
+        // Contact Message Constructor
+        function ContactMessage(name, email, reason, message, date) {
+            this.name = name;
+            this.email = email;
+            this.reason = reason;
+            this.message = message;
+            this.date = date;
+        }
+
+        // Sample Messages Array
+        const contactMessages = [
+            new ContactMessage(
+                "Ahmed Al-Harthy",
+                "ahmed@example.com",
+                "fragrance",
+                "Looking for a recommendation for a formal event...",
+                "Nov 20, 2025"
+            ),
+            new ContactMessage(
+                "Sarah Johnson",
+                "sarah.j@example.com",
+                "order",
+                "Question about my recent order #ORD-2025-001...",
+                "Nov 19, 2025"
+            )
+        ];
+
+        // Function to display contact messages
+        function displayMessages() {
+            const tableBody = document.getElementById('messagesTableBody');
+            tableBody.innerHTML = '';
+
+            contactMessages.forEach(message => {
+                const messagePreview = message.message.length > 50 
+                    ? message.message.substring(0, 50) + '...' 
+                    : message.message;
+
+                const messageHTML = `
+                    <tr>
+                        <td class="fw-bold">${message.name}</td>
+                        <td>${message.email}</td>
+                        <td><span class="badge bg-primary">${message.reason}</span></td>
+                        <td>${messagePreview}</td>
+                        <td><small class="text-muted">${message.date}</small></td>
+                    </tr>
+                `;
+                tableBody.innerHTML += messageHTML;
+            });
+        }
+
+        // Character counter for message textarea
+        function updateCharCount() {
+            const message = document.getElementById('message');
+            const charCount = document.getElementById('charCount');
+            charCount.textContent = message.value.length;
+            
+            // Change color based on length
+            if (message.value.length > 450) {
+                charCount.className = 'text-danger';
+            } else if (message.value.length > 400) {
+                charCount.className = 'text-warning';
+            } else {
+                charCount.className = 'text-muted';
+            }
+        }
+
+        // Enhanced form validation
+        function validateForm(event) {
+            event.preventDefault();
+            event.stopPropagation();
+            
+            const form = document.getElementById('contactForm');
+            
+            if (form.checkValidity()) {
+                // Form is valid - process submission
+                const formData = {
+                    name: document.getElementById('name').value,
+                    email: document.getElementById('email').value,
+                    phone: document.getElementById('phone').value,
+                    reason: document.getElementById('reason').value,
+                    urgency: document.querySelector('input[name="urgency"]:checked').value,
+                    message: document.getElementById('message').value,
+                    newsletter: document.getElementById('newsletter').checked
+                };
+                
+                // Add to messages array
+                const newMessage = new ContactMessage(
+                    formData.name,
+                    formData.email,
+                    formData.reason,
+                    formData.message,
+                    new Date().toLocaleDateString('en-US', { 
+                        year: 'numeric', 
+                        month: 'short', 
+                        day: 'numeric' 
+                    })
+                );
+                
+                contactMessages.unshift(newMessage); // Add to beginning
+                displayMessages();
+                
+                // Show success message
+                alert('Thank you for your message! We will get back to you within 24 hours.');
+                
+                // Reset form
+                form.reset();
+                form.classList.remove('was-validated');
+                updateCharCount();
+                
+            } else {
+                // Form is invalid - show validation errors
+                form.classList.add('was-validated');
+            }
+        }
+
+        // Phone number formatting
+        function formatPhoneNumber(input) {
+            // Remove all non-digits
+            let numbers = input.value.replace(/\D/g, '');
+            
+            // Format based on length
+            if (numbers.length <= 3) {
+                input.value = '+968 ' + numbers;
+            } else if (numbers.length <= 8) {
+                input.value = '+968 ' + numbers.substring(0, 4) + ' ' + numbers.substring(4);
+            } else {
+                input.value = '+968 ' + numbers.substring(0, 4) + ' ' + numbers.substring(4, 8);
+            }
+        }
+
+        // Event Listeners
+        document.getElementById('contactForm').addEventListener('submit', validateForm);
+        document.getElementById('message').addEventListener('input', updateCharCount);
+        
+        // Phone number formatting on input
+        document.getElementById('phone').addEventListener('input', function() {
+            formatPhoneNumber(this);
+        });
+
+        // Real-time validation for name field
+        document.getElementById('name').addEventListener('input', function() {
+            const nameRegex = /^[A-Za-z\s]{2,50}$/;
+            if (this.value && !nameRegex.test(this.value)) {
+                this.setCustomValidity('Name should contain only letters and spaces (2-50 characters)');
+            } else {
+                this.setCustomValidity('');
+            }
+        });
+
+        // Initialize
+        displayMessages();
+        updateCharCount();
+    </script>
 </body>
 </html>
+
 

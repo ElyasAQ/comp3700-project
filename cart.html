@@ -3,132 +3,353 @@
 <head>
     <meta charset="UTF-8">
     <title>Your Cart – Nasagh</title>
-    <link rel="stylesheet" href="style.css">
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.0/font/bootstrap-icons.css">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
-<body>
-
-<header>
-    <div class="container">
-        <div class="logo">
-            <img src="images/oud1 - Copy-Recovered.png" alt="Nasagh Logo" class="header-logo">
-            <p class="logo-tagline">Timeless Essence of Oud</p>
-        </div>
-        <nav>
-            <ul>
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="shop.html">Collection</a></li>
-                    <li><a href="about.html">Our Story</a></li>
-                    <li><a href="contact.html">Contact</a></li>
-                    <li><a href="account.html">Account</a></li>
-                    <li><a href="cart.html">Cart</a></li>
-            </ul>
-        </nav>
-    </div>
-</header>
-
-<main id="main-content">
-
-    <section class="content-box fade-in">
-        <h2>Your Cart</h2>
-        <p>Review your selected perfumes and complete your order.</p>
-
-        <!-- Cart Table (Assignment table #3) -->
-        <table>
-            <thead>
-                <tr>
-                    <th>Perfume</th>
-                    <th>Size</th>
-                    <th>Quantity</th>
-                    <th>Unit Price (OMR)</th>
-                    <th>Subtotal (OMR)</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <td>Midnight Oud</td>
-                    <td>50 ml</td>
-                    <td>1</td>
-                    <td>25.0</td>
-                    <td>25.0</td>
-                </tr>
-                <tr>
-                    <td colspan="4" style="font-weight:600;">Total</td>
-                    <td>25.0</td>
-                </tr>
-            </tbody>
-        </table>
-
-        <!-- Checkout Form (to httpbin) -->
-        <form action="https://httpbin.org/get" method="get" style="margin-top: 35px;">
-            <fieldset>
-                <legend>Checkout Details</legend>
-
-                <div class="form-group">
-                    <label for="full-name">Full Name</label>
-                    <input type="text" id="full-name" name="name" required>
+<body class="bg-light">
+    <!-- Navigation Bar -->
+    <nav class="navbar navbar-expand-lg navbar-white bg-white fixed-top shadow-sm">
+        <div class="container">
+            <a class="navbar-brand d-flex align-items-center" href="index.html">
+                <img src="images/oud1 - Copy-Recovered.png" alt="Nasagh Logo" height="50" class="me-2">
+                <div class="d-flex flex-column">
+                    <span class="fw-bold fs-4">NASAGH</span>
+                    <small class="text-muted fst-italic">Timeless Essence of Oud</small>
                 </div>
-
-                <div class="form-group">
-                    <label for="address">Shipping Address</label>
-                    <textarea id="address" name="address" rows="3" required></textarea>
-                </div>
-
-                <div class="form-group">
-                    <label for="city">City</label>
-                    <input type="text" id="city" name="city" required>
-                </div>
-
-                <div class="form-group">
-                    <label for="phone">Phone</label>
-                    <input type="tel" id="phone" name="phone" required>
-                </div>
-
-                <div class="form-group">
-                    <label>Payment Method</label>
-                    <label><input type="radio" name="payment" value="card" checked> Credit / Debit Card</label>
-                    <label><input type="radio" name="payment" value="cod"> Cash on Delivery</label>
-                </div>
-
-                <button type="submit">Place Order</button>
-            </fieldset>
-        </form>
-    </section>
-
-</main>
-
-<footer>
-    <div class="container">
-        <div class="footer-content">
-            <div class="footer-section">
-                <h3>نسغ Nasagh</h3>
-                <p>Timeless Arabian Perfumes</p>
-                <p style="margin-top: 15px; font-size: 0.9em;">Crafting olfactory excellence since 2022</p>
-            </div>
-            <div class="footer-section">
-                <h4>Explore</h4>
-                <ul>
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="shop.html">Collection</a></li>
-                    <li><a href="about.html">Our Story</a></li>
-                    <li><a href="contact.html">Contact</a></li>
-                    <li><a href="cart.html">Cart</a></li>
-                    <li><a href="newsletter.html">Newsletter</a></li>
+            </a>
+            
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="shop.html">Collection</a></li>
+                    <li class="nav-item"><a class="nav-link" href="about.html">Our Story</a></li>
+                    <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+                    <li class="nav-item"><a class="nav-link" href="account.html">Account</a></li>
+                    <li class="nav-item"><a class="nav-link active fw-bold" href="cart.html">Cart</a></li>
+                    <li class="nav-item"><a class="nav-link" href="questionnaire.html">Questionnaire</a></li>
+                    <li class="nav-item"><a class="nav-link" href="calculate.html">Calculator</a></li>
+                    <li class="nav-item"><a class="nav-link" href="funpage.html">Fun Page</a></li>
                 </ul>
             </div>
-            <div class="footer-section">
-                    <h4>Contact</h4>
+        </div>
+    </nav>
+
+    <main class="container mt-5 pt-5">
+        <div class="card border-0 shadow">
+            <div class="card-body p-4 p-md-5">
+                <h1 class="text-center mb-4">Your Cart</h1>
+                <p class="text-center text-muted mb-4">Review your selected perfumes and complete your order.</p>
+
+                <!-- Add Product Form -->
+                <div class="card border-primary mb-4">
+                    <div class="card-header bg-primary text-white">
+                        <h5 class="mb-0"><i class="bi bi-plus-circle me-2"></i>Add Product to Cart</h5>
+                    </div>
+                    <div class="card-body">
+                        <form id="addProductForm" class="row g-3">
+                            <div class="col-md-4">
+                                <label for="productName" class="form-label">Product Name</label>
+                                <input type="text" class="form-control" id="productName" placeholder="Midnight Oud" required>
+                            </div>
+                            <div class="col-md-2">
+                                <label for="productSize" class="form-label">Size</label>
+                                <select class="form-select" id="productSize" required>
+                                    <option value="30ml">30ml</option>
+                                    <option value="50ml" selected>50ml</option>
+                                    <option value="75ml">75ml</option>
+                                    <option value="100ml">100ml</option>
+                                </select>
+                            </div>
+                            <div class="col-md-2">
+                                <label for="productQuantity" class="form-label">Quantity</label>
+                                <input type="number" class="form-control" id="productQuantity" min="1" value="1" required>
+                            </div>
+                            <div class="col-md-2">
+                                <label for="productPrice" class="form-label">Price (OMR)</label>
+                                <input type="number" class="form-control" id="productPrice" step="0.01" min="0" placeholder="25.00" required>
+                            </div>
+                            <div class="col-md-2 d-flex align-items-end">
+                                <button type="submit" class="btn btn-primary w-100">Add to Cart</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+
+                <!-- Search Products Form -->
+                <div class="card border-info mb-4">
+                    <div class="card-header bg-info text-white">
+                        <h5 class="mb-0"><i class="bi bi-search me-2"></i>Search Cart Items</h5>
+                    </div>
+                    <div class="card-body">
+                        <form id="searchProductForm" class="row g-3">
+                            <div class="col-md-8">
+                                <label for="searchProductName" class="form-label">Search by Product Name</label>
+                                <input type="text" class="form-control" id="searchProductName" placeholder="Enter product name...">
+                            </div>
+                            <div class="col-md-4 d-flex align-items-end">
+                                <button type="submit" class="btn btn-info w-100">Search</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+
+                <!-- Cart Table -->
+                <div class="table-responsive mb-5">
+                    <table class="table table-striped table-bordered">
+                        <thead class="table-dark">
+                            <tr>
+                                <th>Perfume</th>
+                                <th>Size</th>
+                                <th>Quantity</th>
+                                <th>Unit Price (OMR)</th>
+                                <th>Subtotal (OMR)</th>
+                                <th>Action</th>
+                            </tr>
+                        </thead>
+                        <tbody id="cartTableBody">
+                            <!-- Cart items will be dynamically inserted here by JavaScript -->
+                        </tbody>
+                    </table>
+                </div>
+
+                <!-- Cart Summary -->
+                <div class="row justify-content-end">
+                    <div class="col-md-6">
+                        <div class="card border-success">
+                            <div class="card-body">
+                                <h5 class="card-title">Order Summary</h5>
+                                <div class="d-flex justify-content-between mb-2">
+                                    <span>Subtotal:</span>
+                                    <span id="subtotalAmount">0.00 OMR</span>
+                                </div>
+                                <div class="d-flex justify-content-between mb-2">
+                                    <span>Shipping:</span>
+                                    <span id="shippingAmount">2.00 OMR</span>
+                                </div>
+                                <div class="d-flex justify-content-between mb-3 fw-bold fs-5">
+                                    <span>Total:</span>
+                                    <span id="totalAmount">0.00 OMR</span>
+                                </div>
+                                <button class="btn btn-success w-100" onclick="proceedToCheckout()">
+                                    Proceed to Checkout
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Checkout Form -->
+                <div class="mt-5" id="checkoutSection" style="display: none;">
+                    <hr>
+                    <form id="checkoutForm" action="https://httpbin.org/get" method="get">
+                        <h3 class="mb-4">Checkout Details</h3>
+                        <div class="row g-3">
+                            <div class="col-md-6">
+                                <label for="full-name" class="form-label">Full Name</label>
+                                <input type="text" class="form-control" id="full-name" name="name" required>
+                            </div>
+                            <div class="col-md-6">
+                                <label for="email" class="form-label">Email</label>
+                                <input type="email" class="form-control" id="email" name="email" required>
+                            </div>
+                            <div class="col-12">
+                                <label for="address" class="form-label">Shipping Address</label>
+                                <textarea class="form-control" id="address" name="address" rows="3" required></textarea>
+                            </div>
+                            <div class="col-md-6">
+                                <label for="city" class="form-label">City</label>
+                                <input type="text" class="form-control" id="city" name="city" required>
+                            </div>
+                            <div class="col-md-6">
+                                <label for="phone" class="form-label">Phone</label>
+                                <input type="tel" class="form-control" id="phone" name="phone" required>
+                            </div>
+                            <div class="col-12">
+                                <label class="form-label">Payment Method</label>
+                                <div class="d-flex gap-3">
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="radio" name="payment" id="card" value="card" checked>
+                                        <label class="form-check-label" for="card">Credit / Debit Card</label>
+                                    </div>
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="radio" name="payment" id="cod" value="cod">
+                                        <label class="form-check-label" for="cod">Cash on Delivery</label>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-12 text-center">
+                                <button type="submit" class="btn btn-primary btn-lg">Place Order</button>
+                                <button type="button" class="btn btn-outline-secondary btn-lg ms-2" onclick="hideCheckout()">Cancel</button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-dark text-light pt-5 mt-5">
+        <div class="container">
+            <div class="row g-4">
+                <div class="col-lg-4">
+                    <h5 class="fw-bold">نسغ Nasagh</h5>
+                    <p>Timeless Arabian Perfumes</p>
+                    <p class="small text-secondary">Crafting olfactory excellence since 2022</p>
+                </div>
+                <div class="col-lg-4">
+                    <h5>Explore</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="index.html" class="text-light text-decoration-none">Home</a></li>
+                        <li><a href="shop.html" class="text-light text-decoration-none">Collection</a></li>
+                        <li><a href="about.html" class="text-light text-decoration-none">Our Story</a></li>
+                        <li><a href="contact.html" class="text-light text-decoration-none">Contact</a></li>
+                        <li><a href="cart.html" class="text-light text-decoration-none">Cart</a></li>
+                        <li><a href="newsletter.html" class="text-light text-decoration-none">Newsletter</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-4">
+                    <h5>Contact</h5>
                     <p>Email: s150229@student.squ.edu.om</p>
                     <p>Phone: +968 71183928</p>
                     <p>Muscat, Sultanate of Oman</p>
+                </div>
+            </div>
+            <div class="row mt-4 pt-4 border-top border-secondary">
+                <div class="col-12 text-center">
+                    <p class="mb-0">&copy; 2025 Nasagh Inc. All rights reserved. | Crafted by WEB Crafters Team</p>
+                </div>
             </div>
         </div>
-        <div class="footer-bottom">
-            <p>&copy; 2025 Nasagh Inc. All rights reserved. | Crafted by WEB Crafters Team</p>
-        </div>
-    </div>
-</footer>
+    </footer>
 
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    
+    <!-- JavaScript for Dynamic Cart Management -->
+    <script>
+        // Product Constructor Function
+        function CartProduct(name, size, quantity, price) {
+            this.name = name;
+            this.size = size;
+            this.quantity = quantity;
+            this.price = price;
+            this.subtotal = quantity * price;
+        }
+
+        // Initial Cart Array
+        const cartItems = [
+            new CartProduct("Midnight Oud", "50ml", 1, 25.0)
+        ];
+
+        // Function to display all cart items
+        function displayCart(itemsArray = cartItems) {
+            const tableBody = document.getElementById('cartTableBody');
+            tableBody.innerHTML = '';
+
+            let subtotal = 0;
+
+            itemsArray.forEach((item, index) => {
+                const itemHTML = `
+                    <tr>
+                        <td class="fw-bold">${item.name}</td>
+                        <td>${item.size}</td>
+                        <td>${item.quantity}</td>
+                        <td>${item.price.toFixed(2)}</td>
+                        <td>${item.subtotal.toFixed(2)}</td>
+                        <td>
+                            <button class="btn btn-outline-danger btn-sm" onclick="removeFromCart(${index})">
+                                <i class="bi bi-trash"></i> Remove
+                            </button>
+                        </td>
+                    </tr>
+                `;
+                tableBody.innerHTML += itemHTML;
+                subtotal += item.subtotal;
+            });
+
+            // Update summary
+            updateCartSummary(subtotal);
+        }
+
+        // Function to update cart summary
+        function updateCartSummary(subtotal) {
+            const shipping = 2.00;
+            const total = subtotal + shipping;
+
+            document.getElementById('subtotalAmount').textContent = subtotal.toFixed(2) + ' OMR';
+            document.getElementById('shippingAmount').textContent = shipping.toFixed(2) + ' OMR';
+            document.getElementById('totalAmount').textContent = total.toFixed(2) + ' OMR';
+        }
+
+        // Function to add product to cart
+        function addToCart(event) {
+            event.preventDefault();
+            
+            const name = document.getElementById('productName').value;
+            const size = document.getElementById('productSize').value;
+            const quantity = parseInt(document.getElementById('productQuantity').value);
+            const price = parseFloat(document.getElementById('productPrice').value);
+
+            const newProduct = new CartProduct(name, size, quantity, price);
+            cartItems.push(newProduct);
+            
+            displayCart();
+            document.getElementById('addProductForm').reset();
+            
+            // Show success message
+            alert('Product added to cart successfully!');
+        }
+
+        // Function to remove product from cart
+        function removeFromCart(index) {
+            if (confirm('Are you sure you want to remove this item from your cart?')) {
+                cartItems.splice(index, 1);
+                displayCart();
+            }
+        }
+
+        // Function to search products in cart
+        function searchProducts(event) {
+            event.preventDefault();
+            
+            const searchTerm = document.getElementById('searchProductName').value.toLowerCase();
+            
+            const filteredItems = cartItems.filter(item => 
+                item.name.toLowerCase().includes(searchTerm)
+            );
+            
+            displayCart(filteredItems);
+        }
+
+        // Function to proceed to checkout
+        function proceedToCheckout() {
+            if (cartItems.length === 0) {
+                alert('Your cart is empty! Please add some products first.');
+                return;
+            }
+            document.getElementById('checkoutSection').style.display = 'block';
+            document.getElementById('checkoutSection').scrollIntoView({ behavior: 'smooth' });
+        }
+
+        // Function to hide checkout section
+        function hideCheckout() {
+            document.getElementById('checkoutSection').style.display = 'none';
+        }
+
+        // Event Listeners
+        document.getElementById('addProductForm').addEventListener('submit', addToCart);
+        document.getElementById('searchProductForm').addEventListener('submit', searchProducts);
+
+        // Initialize display
+        displayCart();
+    </script>
 </body>
 </html>
-

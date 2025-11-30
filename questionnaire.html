@@ -1,0 +1,408 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Customer Feedback – Nasagh</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.0/font/bootstrap-icons.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body class="bg-light">
+    <!-- Navigation Bar -->
+    <nav class="navbar navbar-expand-lg navbar-white bg-white fixed-top shadow-sm">
+        <div class="container">
+            <a class="navbar-brand d-flex align-items-center" href="index.html">
+                <img src="images/oud1 - Copy-Recovered.png" alt="Nasagh Logo" height="50" class="me-2">
+                <div class="d-flex flex-column">
+                    <span class="fw-bold fs-4">NASAGH</span>
+                    <small class="text-muted fst-italic">Timeless Essence of Oud</small>
+                </div>
+            </a>
+            
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="shop.html">Collection</a></li>
+                    <li class="nav-item"><a class="nav-link" href="about.html">Our Story</a></li>
+                    <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+                    <li class="nav-item"><a class="nav-link" href="account.html">Account</a></li>
+                    <li class="nav-item"><a class="nav-link" href="cart.html">Cart</a></li>
+                    <li class="nav-item"><a class="nav-link active fw-bold" href="questionnaire.html">Questionnaire</a></li>
+                    <li class="nav-item"><a class="nav-link" href="calculate.html">Calculator</a></li>
+                    <li class="nav-item"><a class="nav-link" href="funpage.html">Fun Page</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <main class="container mt-5 pt-5">
+        <div class="row justify-content-center">
+            <div class="col-lg-8">
+                <div class="card border-0 shadow">
+                    <div class="card-body p-4 p-md-5">
+                        <div class="text-center mb-5">
+                            <i class="bi bi-chat-square-text display-4 text-primary mb-3"></i>
+                            <h1 class="card-title">Customer Feedback Form</h1>
+                            <p class="lead text-muted">Help us improve by sharing your experience with Nasagh</p>
+                        </div>
+
+                        <form id="feedbackForm" class="needs-validation" novalidate>
+                            <!-- Personal Information -->
+                            <div class="mb-4">
+                                <h4 class="border-bottom pb-2 mb-3">Personal Information</h4>
+                                <div class="row g-3">
+                                    <div class="col-md-6">
+                                        <label for="fullName" class="form-label">Full Name *</label>
+                                        <input type="text" class="form-control" id="fullName" name="fullName" required 
+                                               pattern="[A-Za-z\s]{2,50}">
+                                        <div class="invalid-feedback">Please provide your full name (2-50 letters only).</div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <label for="email" class="form-label">Email Address *</label>
+                                        <input type="email" class="form-control" id="email" name="email" required
+                                               pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$">
+                                        <div class="invalid-feedback">Please provide a valid email address.</div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <label for="phone" class="form-label">Phone Number</label>
+                                        <input type="tel" class="form-control" id="phone" name="phone"
+                                               pattern="[\+]?[968]{3}[\s]?[0-9]{8}">
+                                        <div class="invalid-feedback">Please provide a valid Omani phone number.</div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <label for="age" class="form-label">Age Group *</label>
+                                        <select class="form-select" id="age" name="age" required>
+                                            <option value="">Select age group...</option>
+                                            <option value="18-25">18-25 years</option>
+                                            <option value="26-35">26-35 years</option>
+                                            <option value="36-45">36-45 years</option>
+                                            <option value="46-60">46-60 years</option>
+                                            <option value="60+">60+ years</option>
+                                        </select>
+                                        <div class="invalid-feedback">Please select your age group.</div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Product Experience -->
+                            <div class="mb-4">
+                                <h4 class="border-bottom pb-2 mb-3">Product Experience</h4>
+                                <div class="mb-3">
+                                    <label class="form-label">Which Nasagh products have you tried? *</label>
+                                    <div class="row">
+                                        <div class="col-md-6">
+                                            <div class="form-check mb-2">
+                                                <input class="form-check-input" type="checkbox" name="products" value="midnight-oud" id="midnightOud" required>
+                                                <label class="form-check-label" for="midnightOud">Midnight Oud</label>
+                                            </div>
+                                            <div class="form-check mb-2">
+                                                <input class="form-check-input" type="checkbox" name="products" value="desert-rose" id="desertRose">
+                                                <label class="form-check-label" for="desertRose">Desert Rose</label>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <div class="form-check mb-2">
+                                                <input class="form-check-input" type="checkbox" name="products" value="royal-amber" id="royalAmber">
+                                                <label class="form-check-label" for="royalAmber">Royal Amber</label>
+                                            </div>
+                                            <div class="form-check mb-2">
+                                                <input class="form-check-input" type="checkbox" name="products" value="amber-flame" id="amberFlame">
+                                                <label class="form-check-label" for="amberFlame">Amber Flame</label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="invalid-feedback">Please select at least one product.</div>
+                                </div>
+
+                                <div class="mb-3">
+                                    <label for="satisfaction" class="form-label">Overall Satisfaction *</label>
+                                    <div class="d-flex justify-content-between text-muted small mb-2">
+                                        <span>Very Dissatisfied</span>
+                                        <span>Very Satisfied</span>
+                                    </div>
+                                    <input type="range" class="form-range" id="satisfaction" name="satisfaction" min="1" max="5" value="3" required>
+                                    <div class="d-flex justify-content-between">
+                                        <span>1</span><span>2</span><span>3</span><span>4</span><span>5</span>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Detailed Feedback -->
+                            <div class="mb-4">
+                                <h4 class="border-bottom pb-2 mb-3">Detailed Feedback</h4>
+                                <div class="mb-3">
+                                    <label for="likes" class="form-label">What do you like most about our products? *</label>
+                                    <textarea class="form-control" id="likes" name="likes" rows="3" required 
+                                              minlength="10" maxlength="500"></textarea>
+                                    <div class="form-text"><span id="likesCount">0</span>/500 characters</div>
+                                    <div class="invalid-feedback">Please provide at least 10 characters.</div>
+                                </div>
+
+                                <div class="mb-3">
+                                    <label for="improvements" class="form-label">Any suggestions for improvement?</label>
+                                    <textarea class="form-control" id="improvements" name="improvements" rows="3"
+                                              maxlength="500"></textarea>
+                                    <div class="form-text"><span id="improvementsCount">0</span>/500 characters</div>
+                                </div>
+
+                                <div class="mb-3">
+                                    <label class="form-label">How likely are you to recommend Nasagh to others? *</label>
+                                    <div class="row text-center">
+                                        <div class="col">
+                                            <div class="form-check">
+                                                <input class="form-check-input" type="radio" name="recommend" id="veryLikely" value="very-likely" required>
+                                                <label class="form-check-label" for="veryLikely">Very Likely</label>
+                                            </div>
+                                        </div>
+                                        <div class="col">
+                                            <div class="form-check">
+                                                <input class="form-check-input" type="radio" name="recommend" id="likely" value="likely">
+                                                <label class="form-check-label" for="likely">Likely</label>
+                                            </div>
+                                        </div>
+                                        <div class="col">
+                                            <div class="form-check">
+                                                <input class="form-check-input" type="radio" name="recommend" id="neutral" value="neutral">
+                                                <label class="form-check-label" for="neutral">Neutral</label>
+                                            </div>
+                                        </div>
+                                        <div class="col">
+                                            <div class="form-check">
+                                                <input class="form-check-input" type="radio" name="recommend" id="unlikely" value="unlikely">
+                                                <label class="form-check-label" for="unlikely">Unlikely</label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="invalid-feedback">Please select your recommendation likelihood.</div>
+                                </div>
+                            </div>
+
+                            <!-- Contact Preferences -->
+                            <div class="mb-4">
+                                <h4 class="border-bottom pb-2 mb-3">Contact Preferences</h4>
+                                <div class="form-check mb-2">
+                                    <input class="form-check-input" type="checkbox" id="newsletter" name="newsletter">
+                                    <label class="form-check-label" for="newsletter">Subscribe to our newsletter for updates</label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" id="contactOk" name="contactOk">
+                                    <label class="form-check-label" for="contactOk">I'm open to being contacted for follow-up feedback</label>
+                                </div>
+                            </div>
+
+                            <div class="text-center">
+                                <button type="submit" class="btn btn-primary btn-lg me-3">
+                                    <i class="bi bi-send me-2"></i>Submit Feedback
+                                </button>
+                                <button type="reset" class="btn btn-outline-secondary btn-lg">Reset Form</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-dark text-light pt-5 mt-5">
+        <div class="container">
+            <div class="row g-4">
+                <div class="col-lg-4">
+                    <h5 class="fw-bold">نسغ Nasagh</h5>
+                    <p>Timeless Arabian Perfumes</p>
+                    <p class="small text-secondary">Crafting olfactory excellence since 2022</p>
+                </div>
+                <div class="col-lg-4">
+                    <h5>Explore</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="index.html" class="text-light text-decoration-none">Home</a></li>
+                        <li><a href="shop.html" class="text-light text-decoration-none">Collection</a></li>
+                        <li><a href="about.html" class="text-light text-decoration-none">Our Story</a></li>
+                        <li><a href="contact.html" class="text-light text-decoration-none">Contact</a></li>
+                        <li><a href="cart.html" class="text-light text-decoration-none">Cart</a></li>
+                        <li><a href="newsletter.html" class="text-light text-decoration-none">Newsletter</a></li>
+                        <li><a href="questionnaire.html" class="text-light text-decoration-none">Questionnaire</a></li>
+                        <li><a href="calculate.html" class="text-light text-decoration-none">Calculator</a></li>
+                        <li><a href="funpage.html" class="text-light text-decoration-none">Fun Page</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-4">
+                    <h5>Connect</h5>
+                    <p>Email: s150229@student.squ.edu.om</p>
+                    <p>Phone: +968 71183928</p>
+                    <p>Muscat, Sultanate of Oman</p>
+                </div>
+            </div>
+            <div class="row mt-4 pt-4 border-top border-secondary">
+                <div class="col-12 text-center">
+                    <p class="mb-0">&copy; 2025 Nasagh Inc. All rights reserved. | Crafted by WEB Crafters Team</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- JavaScript for Form Validation -->
+<script>
+    // CHARACTER COUNTERS FOR TEXTAREAS
+    // This function sets up real-time character counting for the feedback textareas
+    function setupCharacterCounters() {
+        // Get references to the textareas and their character count displays
+        const likesTextarea = document.getElementById('likes');
+        const improvementsTextarea = document.getElementById('improvements');
+        const likesCount = document.getElementById('likesCount');
+        const improvementsCount = document.getElementById('improvementsCount');
+
+        // Monitor the "likes" textarea for any input changes
+        likesTextarea.addEventListener('input', function() {
+            // Update the character count display
+            likesCount.textContent = this.value.length;
+            
+            // Validate minimum length requirement in real-time
+            // Show red border if less than 10 characters, remove it if enough
+            if (this.value.length < 10) {
+                this.classList.add('is-invalid');
+            } else {
+                this.classList.remove('is-invalid');
+            }
+        });
+
+        // Monitor the "improvements" textarea for input changes (optional field)
+        improvementsTextarea.addEventListener('input', function() {
+            // Just update the character count, no validation since this field is optional
+            improvementsCount.textContent = this.value.length;
+        });
+    }
+
+    // CUSTOM VALIDATION FOR CHECKBOXES
+    // Ensures at least one product checkbox is selected
+    function setupCheckboxValidation() {
+        // Get all the product checkboxes
+        const productCheckboxes = document.querySelectorAll('input[name="products"]');
+        
+        // Add change listener to each checkbox
+        productCheckboxes.forEach(checkbox => {
+            checkbox.addEventListener('change', function() {
+                // Check if at least one checkbox is checked
+                const atLeastOneChecked = Array.from(productCheckboxes).some(cb => cb.checked);
+                
+                // Set custom validation message for all checkboxes
+                productCheckboxes.forEach(cb => {
+                    if (!atLeastOneChecked) {
+                        // No products selected - show error message
+                        cb.setCustomValidity('Please select at least one product');
+                    } else {
+                        // At least one product selected - clear error
+                        cb.setCustomValidity('');
+                    }
+                });
+            });
+        });
+    }
+
+    // REAL-TIME NAME VALIDATION
+    // Validates the name field as user types
+    function setupNameValidation() {
+        const nameInput = document.getElementById('fullName');
+        
+        nameInput.addEventListener('input', function() {
+            // Regular expression to check: only letters and spaces, 2-50 characters
+            const nameRegex = /^[A-Za-z\s]{2,50}$/;
+            
+            // Validate against the pattern
+            if (this.value && !nameRegex.test(this.value)) {
+                // Invalid name format - set custom error message
+                this.setCustomValidity('Name should contain only letters and spaces (2-50 characters)');
+            } else {
+                // Valid name - clear any error messages
+                this.setCustomValidity('');
+            }
+        });
+    }
+
+    // PHONE NUMBER FORMATTING
+    // Automatically formats phone numbers as +968 XXX XXXX
+    function setupPhoneFormatting() {
+        const phoneInput = document.getElementById('phone');
+        
+        phoneInput.addEventListener('input', function() {
+            // Remove all non-digit characters from the input
+            let numbers = this.value.replace(/\D/g, '');
+            
+            // Format the phone number based on how many digits have been entered
+            if (numbers.length <= 3) {
+                // Just country code + partial number
+                this.value = '+968 ' + numbers;
+            } else if (numbers.length <= 8) {
+                // Country code + first 4 digits + remaining digits
+                this.value = '+968 ' + numbers.substring(0, 4) + ' ' + numbers.substring(4);
+            } else {
+                // Full number with proper spacing
+                this.value = '+968 ' + numbers.substring(0, 4) + ' ' + numbers.substring(4, 8);
+            }
+        });
+    }
+
+    // FORM SUBMISSION HANDLER
+    // Processes the form when user clicks submit
+    document.getElementById('feedbackForm').addEventListener('submit', function(event) {
+        // Prevent the form from submitting normally (we want to validate first)
+        event.preventDefault();
+        event.stopPropagation();
+
+        const form = this;
+        
+        // Check if all form validation passes
+        if (form.checkValidity()) {
+            // FORM IS VALID - Collect all the data from the form
+            
+            const formData = {
+                name: document.getElementById('fullName').value,
+                email: document.getElementById('email').value,
+                phone: document.getElementById('phone').value,
+                age: document.getElementById('age').value,
+                // Get all checked products and convert to array of values
+                products: Array.from(document.querySelectorAll('input[name="products"]:checked')).map(cb => cb.value),
+                satisfaction: document.getElementById('satisfaction').value,
+                likes: document.getElementById('likes').value,
+                improvements: document.getElementById('improvements').value,
+                // Get the selected recommendation option
+                recommend: document.querySelector('input[name="recommend"]:checked').value,
+                newsletter: document.getElementById('newsletter').checked,
+                contactOk: document.getElementById('contactOk').checked
+            };
+            
+            // Show success message to the user
+            alert('Thank you for your valuable feedback! We appreciate your time and will use your insights to improve our products.');
+            
+            // Reset the form to empty state
+            form.reset();
+            form.classList.remove('was-validated');
+            
+            // Reset character counters back to zero
+            document.getElementById('likesCount').textContent = '0';
+            document.getElementById('improvementsCount').textContent = '0';
+            
+        } else {
+            // FORM HAS VALIDATION ERRORS - Show the error messages to user
+            form.classList.add('was-validated');
+        }
+    });
+
+    // INITIALIZE ALL FEATURES WHEN PAGE LOADS
+    // This runs when the page finishes loading
+    document.addEventListener('DOMContentLoaded', function() {
+        setupCharacterCounters();
+        setupCheckboxValidation();
+        setupNameValidation();
+        setupPhoneFormatting();
+    });
+</script>

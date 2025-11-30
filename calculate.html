@@ -1,0 +1,445 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Perfume Calculator – Nasagh</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.0/font/bootstrap-icons.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body class="bg-light">
+    <!-- Navigation Bar -->
+    <nav class="navbar navbar-expand-lg navbar-white bg-white fixed-top shadow-sm">
+        <div class="container">
+            <a class="navbar-brand d-flex align-items-center" href="index.html">
+                <img src="images/oud1 - Copy-Recovered.png" alt="Nasagh Logo" height="50" class="me-2">
+                <div class="d-flex flex-column">
+                    <span class="fw-bold fs-4">NASAGH</span>
+                    <small class="text-muted fst-italic">Timeless Essence of Oud</small>
+                </div>
+            </a>
+            
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="shop.html">Collection</a></li>
+                    <li class="nav-item"><a class="nav-link" href="about.html">Our Story</a></li>
+                    <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+                    <li class="nav-item"><a class="nav-link" href="account.html">Account</a></li>
+                    <li class="nav-item"><a class="nav-link" href="cart.html">Cart</a></li>
+                    <li class="nav-item"><a class="nav-link" href="questionnaire.html">Questionnaire</a></li>
+                    <li class="nav-item"><a class="nav-link active fw-bold" href="calculate.html">Calculator</a></li>
+                    <li class="nav-item"><a class="nav-link" href="funpage.html">Fun Page</a></li>
+                    
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <main class="container mt-5 pt-5">
+        <div class="row justify-content-center">
+            <div class="col-lg-8">
+                <div class="card border-0 shadow">
+                    <div class="card-body p-4 p-md-5">
+                        <div class="text-center mb-5">
+                            <i class="bi bi-calculator display-4 text-primary mb-3"></i>
+                            <h1 class="card-title">Perfume Cost Calculator</h1>
+                            <p class="lead text-muted">
+                                Calculate your personalized perfume costs with bulk discounts and loyalty rewards
+                            </p>
+                        </div>
+
+                        <!-- Calculator Form -->
+                        <form id="perfumeCalculator">
+                            <div class="row g-4">
+                                <!-- Product Selection -->
+                                <div class="col-md-6">
+                                    <label for="perfumeSelect" class="form-label">Select Perfume *</label>
+                                    <select class="form-select" id="perfumeSelect" required>
+                                        <option value="">Choose a perfume...</option>
+                                        <option value="25" data-name="Midnight Oud">Midnight Oud - 25 OMR</option>
+                                        <option value="22" data-name="Desert Rose">Desert Rose - 22 OMR</option>
+                                        <option value="30" data-name="Royal Amber">Royal Amber - 30 OMR</option>
+                                        <option value="28" data-name="Amber Flame">Amber Flame - 28 OMR</option>
+                                        <option value="35" data-name="Oud Royale">Oud Royale - 35 OMR</option>
+                                    </select>
+                                </div>
+
+                                <div class="col-md-6">
+                                    <label for="quantity" class="form-label">Quantity *</label>
+                                    <input type="number" class="form-control" id="quantity" min="1" max="20" value="1" required>
+                                </div>
+
+                                <!-- Customer Type -->
+                                <div class="col-12">
+                                    <label class="form-label">Customer Type *</label>
+                                    <div class="row">
+                                        <div class="col-md-3">
+                                            <div class="form-check">
+                                                <input class="form-check-input" type="radio" name="customerType" id="regular" value="regular" checked>
+                                                <label class="form-check-label" for="regular">Regular Customer</label>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-3">
+                                            <div class="form-check">
+                                                <input class="form-check-input" type="radio" name="customerType" id="loyal" value="loyal">
+                                                <label class="form-check-label" for="loyal">Loyal Customer (10% off)</label>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-3">
+                                            <div class="form-check">
+                                                <input class="form-check-input" type="radio" name="customerType" id="vip" value="vip">
+                                                <label class="form-check-label" for="vip">VIP Member (15% off)</label>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-3">
+                                            <div class="form-check">
+                                                <input class="form-check-input" type="radio" name="customerType" id="senior" value="senior">
+                                                <label class="form-check-label" for="senior">Senior (60+ years, 12% off)</label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- Additional Options -->
+                                <div class="col-12">
+                                    <label class="form-label">Additional Options</label>
+                                    <div class="row">
+                                        <div class="col-md-4">
+                                            <div class="form-check">
+                                                <input class="form-check-input" type="checkbox" id="giftWrap" value="3">
+                                                <label class="form-check-label" for="giftWrap">
+                                                    Gift Wrapping (+3 OMR)
+                                                </label>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-4">
+                                            <div class="form-check">
+                                                <input class="form-check-input" type="checkbox" id="expressShipping" value="5">
+                                                <label class="form-check-label" for="expressShipping">
+                                                    Express Shipping (+5 OMR)
+                                                </label>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-4">
+                                            <div class="form-check">
+                                                <input class="form-check-input" type="checkbox" id="personalizedNote" value="2">
+                                                <label class="form-check-label" for="personalizedNote">
+                                                    Personalized Note (+2 OMR)
+                                                </label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- Calculate Button -->
+                                <div class="col-12 text-center mt-4">
+                                    <button type="button" class="btn btn-primary btn-lg" onclick="calculateTotal()">
+                                        <i class="bi bi-calculator-fill me-2"></i>Calculate Total
+                                    </button>
+                                </div>
+                            </div>
+                        </form>
+
+                        <!-- Results Display -->
+                        <div id="calculationResults" class="mt-5" style="display: none;">
+                            <div class="card border-success">
+                                <div class="card-header bg-success text-white">
+                                    <h4 class="mb-0"><i class="bi bi-receipt me-2"></i>Calculation Results</h4>
+                                </div>
+                                <div class="card-body">
+                                    <div class="row">
+                                        <div class="col-md-6">
+                                            <h5>Order Summary</h5>
+                                            <table class="table table-sm">
+                                                <tbody id="orderSummary">
+                                                    <!-- Order details will be populated here -->
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <h5>Cost Breakdown</h5>
+                                            <table class="table table-sm">
+                                                <tbody id="costBreakdown">
+                                                    <!-- Cost breakdown will be populated here -->
+                                                </tbody>
+                                            </table>
+                                            <div class="text-center mt-3">
+                                                <h3 class="text-success" id="finalTotal">Total: 0 OMR</h3>
+                                                <small class="text-muted" id="savingsInfo"></small>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Formula Explanation -->
+                        <div class="mt-4">
+                            <div class="card border-info">
+                                <div class="card-header bg-info text-white">
+                                    <h5 class="mb-0"><i class="bi bi-info-circle me-2"></i>How It Works</h5>
+                                </div>
+                                <div class="card-body">
+                                    <h6>Calculation Formula:</h6>
+                                    <p><code>Total = (Base Price × Quantity) + Additional Services - Discounts</code></p>
+                                    
+                                    <h6>Discount Rules:</h6>
+                                    <ul class="small">
+                                        <li><strong>Regular Customer:</strong> No discount</li>
+                                        <li><strong>Loyal Customer:</strong> 10% discount on total</li>
+                                        <li><strong>VIP Member:</strong> 15% discount on total</li>
+                                        <li><strong>Senior (60+ years):</strong> 12% discount on total</li>
+                                        <li><strong>Bulk Discount:</strong> 5% off for 5+ items, 10% off for 10+ items</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-dark text-light pt-5 mt-5">
+        <div class="container">
+            <div class="row g-4">
+                <div class="col-lg-4">
+                    <h5 class="fw-bold">نسغ Nasagh</h5>
+                    <p>Timeless Arabian Perfumes</p>
+                    <p class="small text-secondary">Crafting olfactory excellence since 2022</p>
+                </div>
+                <div class="col-lg-4">
+                    <h5>Explore</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="index.html" class="text-light text-decoration-none">Home</a></li>
+                        <li><a href="shop.html" class="text-light text-decoration-none">Collection</a></li>
+                        <li><a href="about.html" class="text-light text-decoration-none">Our Story</a></li>
+                        <li><a href="contact.html" class="text-light text-decoration-none">Contact</a></li>
+                        <li><a href="cart.html" class="text-light text-decoration-none">Cart</a></li>
+                        <li><a href="newsletter.html" class="text-light text-decoration-none">Newsletter</a></li>
+                        <li><a href="questionnaire.html" class="text-light text-decoration-none">Questionnaire</a></li>
+                        <li><a href="calculate.html" class="text-light text-decoration-none">Calculator</a></li>
+                        <li><a href="funpage.html" class="text-light text-decoration-none">Fun Page</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-4">
+                    <h5>Connect</h5>
+                    <p>Email: s150229@student.squ.edu.om</p>
+                    <p>Phone: +968 71183928</p>
+                    <p>Muscat, Sultanate of Oman</p>
+                </div>
+            </div>
+            <div class="row mt-4 pt-4 border-top border-secondary">
+                <div class="col-12 text-center">
+                    <p class="mb-0">&copy; 2025 Nasagh Inc. All rights reserved. | Crafted by WEB Crafters Team</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- JavaScript for Calculator -->
+<script>
+    /**
+     * CALCULATE TOTAL FUNCTION
+     * This is the main function that calculates the total order cost
+     * It applies different types of discounts and additional charges based on user selections
+     */
+    function calculateTotal() {
+        // STEP 1: GET BASIC ORDER INFORMATION
+        // Get the selected perfume's price and name from the dropdown
+        const perfumeSelect = document.getElementById('perfumeSelect');
+        const basePrice = parseFloat(perfumeSelect.value);  // Convert price from text to number
+        const perfumeName = perfumeSelect.options[perfumeSelect.selectedIndex].getAttribute('data-name');
+        
+        // Get the quantity of perfumes the customer wants to order
+        const quantity = parseInt(document.getElementById('quantity').value);
+        
+        // STEP 2: VALIDATE USER INPUTS
+        // Check if user has selected a perfume and entered a valid quantity
+        if (!basePrice || quantity < 1) {
+            alert('Please select a perfume and enter a valid quantity.');
+            return;  // Stop calculation if inputs are invalid
+        }
+
+        // STEP 3: GET CUSTOMER TYPE FOR DISCOUNT CALCULATION
+        // Find which customer type radio button is selected (regular, loyal, vip, senior)
+        const customerType = document.querySelector('input[name="customerType"]:checked').value;
+        
+        // STEP 4: CALCULATE BASE COST
+        // Multiply price by quantity to get the total before any discounts
+        let baseCost = basePrice * quantity;
+
+        // STEP 5: APPLY BULK QUANTITY DISCOUNTS
+        // Customers get discounts when ordering larger quantities
+        let bulkDiscount = 0;
+        let bulkDiscountRate = 0;
+        
+        // Check quantity and apply appropriate bulk discount rate
+        if (quantity >= 10) {
+            bulkDiscountRate = 0.10; // 10% discount when ordering 10 or more items
+            bulkDiscount = baseCost * bulkDiscountRate;  // Calculate discount amount
+        } else if (quantity >= 5) {
+            bulkDiscountRate = 0.05; // 5% discount when ordering 5-9 items
+            bulkDiscount = baseCost * bulkDiscountRate;  // Calculate discount amount
+        }
+        // No bulk discount for orders under 5 items
+
+        // STEP 6: APPLY CUSTOMER TYPE DISCOUNTS
+        // Different customer types get different discount rates
+        let customerDiscount = 0;
+        let customerDiscountRate = 0;
+        
+        // Determine discount rate based on customer type
+        if (customerType === 'loyal') {
+            customerDiscountRate = 0.10; // 10% off for loyal customers
+        } else if (customerType === 'vip') {
+            customerDiscountRate = 0.15; // 15% off for VIP members
+        } else if (customerType === 'senior') {
+            customerDiscountRate = 0.12; // 12% off for senior citizens (60+)
+        }
+        // Regular customers get 0% discount (customerDiscountRate remains 0)
+        
+        // Calculate customer discount amount based on the cost AFTER bulk discount
+        customerDiscount = (baseCost - bulkDiscount) * customerDiscountRate;
+
+        // STEP 7: CALCULATE ADDITIONAL SERVICE CHARGES
+        // Some optional services add extra cost to the order
+        let additionalCost = 0;
+        
+        // Get references to the optional service checkboxes
+        const giftWrap = document.getElementById('giftWrap');
+        const expressShipping = document.getElementById('expressShipping');
+        const personalizedNote = document.getElementById('personalizedNote');
+        
+        // Check each service and add its cost if selected
+        if (giftWrap.checked) {
+            additionalCost += parseFloat(giftWrap.value);  // Add 3 OMR for gift wrapping
+        }
+        if (expressShipping.checked) {
+            additionalCost += parseFloat(expressShipping.value);  // Add 5 OMR for express shipping
+        }
+        if (personalizedNote.checked) {
+            additionalCost += parseFloat(personalizedNote.value);  // Add 2 OMR for personalized note
+        }
+
+        // STEP 8: CALCULATE FINAL TOTAL
+        // Start with base cost, subtract all discounts, then add additional services
+        const subtotal = baseCost - bulkDiscount - customerDiscount + additionalCost;
+        
+        // Calculate total savings from all discounts combined
+        const totalSavings = bulkDiscount + customerDiscount;
+
+        // STEP 9: DISPLAY THE RESULTS TO THE USER
+        displayResults(perfumeName, basePrice, quantity, baseCost, bulkDiscount, 
+                     customerDiscount, additionalCost, subtotal, totalSavings);
+    }
+
+    /**
+     * DISPLAY RESULTS FUNCTION
+     * This function takes all the calculated values and shows them in a user-friendly format
+     * It updates the HTML to display order summary and cost breakdown
+     */
+    function displayResults(perfumeName, basePrice, quantity, baseCost, bulkDiscount, 
+                          customerDiscount, additionalCost, subtotal, totalSavings) {
+        
+        // Make the results section visible (it starts hidden)
+        document.getElementById('calculationResults').style.display = 'block';
+        
+        // UPDATE ORDER SUMMARY TABLE
+        // Show the basic order information in the left table
+        const orderSummary = document.getElementById('orderSummary');
+        orderSummary.innerHTML = `
+            <tr><td>Product:</td><td>${perfumeName}</td></tr>
+            <tr><td>Unit Price:</td><td>${basePrice} OMR</td></tr>
+            <tr><td>Quantity:</td><td>${quantity}</td></tr>
+            <tr><td>Base Cost:</td><td>${baseCost.toFixed(2)} OMR</td></tr>
+        `;
+
+        // UPDATE COST BREAKDOWN TABLE  
+        // Show detailed cost calculation in the right table
+        const costBreakdown = document.getElementById('costBreakdown');
+        costBreakdown.innerHTML = `
+            <tr><td>Base Cost:</td><td>${baseCost.toFixed(2)} OMR</td></tr>
+            <tr><td>Bulk Discount:</td><td class="text-success">-${bulkDiscount.toFixed(2)} OMR</td></tr>
+            <tr><td>Customer Discount:</td><td class="text-success">-${customerDiscount.toFixed(2)} OMR</td></tr>
+            <tr><td>Additional Services:</td><td class="text-danger">+${additionalCost.toFixed(2)} OMR</td></tr>
+        `;
+
+        // UPDATE FINAL TOTAL AND SAVINGS MESSAGE
+        // Show the final amount the customer needs to pay
+        document.getElementById('finalTotal').textContent = `Total: ${subtotal.toFixed(2)} OMR`;
+        
+        // Show how much the customer saved with discounts (if any)
+        if (totalSavings > 0) {
+            document.getElementById('savingsInfo').textContent = 
+                `You saved ${totalSavings.toFixed(2)} OMR with discounts!`;
+        } else {
+            document.getElementById('savingsInfo').textContent = 
+                'No discounts applied to this order.';
+        }
+
+        // AUTO-SCROLL TO RESULTS
+        // Smoothly scroll the page down to show the calculation results
+        document.getElementById('calculationResults').scrollIntoView({ 
+            behavior: 'smooth',  // Animated scrolling
+            block: 'center'      // Center the results in the viewport
+        });
+    }
+
+    /**
+     * INITIALIZE CALCULATOR
+     * Set up all the event listeners when the page loads
+     * This makes the calculator update in real-time as users make changes
+     */
+    document.addEventListener('DOMContentLoaded', function() {
+        // REAL-TIME CALCULATION FEATURE
+        // The calculator automatically updates whenever users change any input
+        
+        // Update when perfume selection changes
+        document.getElementById('perfumeSelect').addEventListener('change', function() {
+            // Only calculate if both perfume and quantity are selected
+            if (this.value && document.getElementById('quantity').value) {
+                calculateTotal();
+            }
+        });
+
+        // Update when quantity changes (user types or uses arrows)
+        document.getElementById('quantity').addEventListener('input', function() {
+            // Only calculate if both perfume and quantity are selected
+            if (this.value && document.getElementById('perfumeSelect').value) {
+                calculateTotal();
+            }
+        });
+
+        // Update when customer type changes (radio buttons)
+        document.querySelectorAll('input[name="customerType"]').forEach(radio => {
+            radio.addEventListener('change', function() {
+                // Only calculate if both perfume and quantity are selected
+                if (document.getElementById('perfumeSelect').value && document.getElementById('quantity').value) {
+                    calculateTotal();
+                }
+            });
+        });
+
+        // Update when additional services are checked/unchecked
+        document.querySelectorAll('input[type="checkbox"]').forEach(checkbox => {
+            checkbox.addEventListener('change', function() {
+                // Only calculate if both perfume and quantity are selected
+                if (document.getElementById('perfumeSelect').value && document.getElementById('quantity').value) {
+                    calculateTotal();
+                }
+            });
+        });
+    });
+</script>

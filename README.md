@@ -224,13 +224,11 @@ Choose one of these platforms:
 
 ## 👨‍💻 Team Contributions part 5
 
-Team Member	Primary Responsibilities	Contributions
-Almuhannad Alhinai	Database Design, PHP Backend Architecture	Created database schema, implemented PDO connections, developed core PHP processing scripts
-Elyas Alquwatie	Frontend Integration, Form Validation	Converted HTML forms to PHP, implemented JavaScript validation, styled result pages
-Hisham Alhinai	Search Functionality, Data Access Pages,
-Testing, Documentation, GitHub Management	Developed search scripts, implemented CRUD operations, created admin interfaces,
-Conducted system testing, created this report, managed version control
-
+| Team Member | Primary Responsibilities | Contributions |
+|-------------|-------------------------|---------------|
+| **Almuhannad Alhinai** | Database Design & PHP Backend Architecture | • Designed comprehensive MySQL database schema with 4 interconnected tables (products, users, orders, cart_items)<br>• Implemented secure PDO database connections with UTF-8 encoding and error handling<br>• Developed core PHP processing scripts for all form submissions (add_product.php, register.php, login.php)<br>• Created object-oriented Product class with proper encapsulation and methods<br>• Established database validation rules and constraints to ensure data integrity |
+| **Elyas Alquwatie** | Frontend Integration & Form Validation | • Converted 12+ HTML forms to PHP-enabled versions with proper action attributes<br>• Implemented comprehensive JavaScript validation for registration and product forms<br>• Styled all PHP result pages with consistent Bootstrap theming and responsive design<br>• Created real-time error messaging systems with visual feedback for users<br>• Ensured seamless integration between frontend design and backend processing |
+| **Hisham Alhinai** | Search Functionality, Data Access & Project Management | • Developed 6 search scripts (search_products.php, search_orders.php, search_cart.php) with dynamic filtering<br>• Implemented complete CRUD operations (create, read, update, delete) for product management<br>• Created admin interfaces (manage_products.php, update_product.php) with confirmation dialogs<br>• Conducted comprehensive system testing for all PHP scripts and database operations<br>• Managed GitHub repository with proper versioning, commits, and documentation<br>• Compiled final project report with detailed technical documentation and screenshots |
 
 
 ## 📧 Contact Information

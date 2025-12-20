@@ -395,7 +395,191 @@
 
     <!-- Bootstrap JS -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+    document.addEventListener('DOMContentLoaded', function() {
+        const regForm = document.querySelector('form[action*="get"]:nth-of-type(2)');
+        const loginForm = document.querySelector('form[action*="get"]:first-of-type');
+        const regPhone = document.getElementById('reg-phone');
+        const passwordField = document.getElementById('reg-password');
+        const confirmField = document.getElementById('reg-confirm');
+
+        if (regPhone) {
+    regPhone.addEventListener('input', function() {
+        let digits = this.value.replace(/\D/g, '');
+        
+        if (digits.length > 8) {
+            digits = digits.substring(0, 8);
+        }
+        
+        if (digits.length > 0) {
+            if (digits.charAt(0) !== '9' && digits.charAt(0) !== '7') {
+                digits = '';
+            }
+        }
+        
+        if (digits.length === 0) {
+            this.value = '';
+        } else {
+            this.value = digits;
+        }
+    });
     
+    regPhone.addEventListener('blur', function() {
+        if (this.value.length === 8) {
+            this.value = '+968 ' + this.value.substring(0, 4) + ' ' + this.value.substring(4);
+        }
+    });
+}
+
+
+        if (passwordField) {
+            passwordField.addEventListener('input', function() {
+                const confirm = document.getElementById('reg-confirm');
+                if (confirm.value && this.value !== confirm.value) {
+                    confirm.setCustomValidity('Passwords do not match');
+                } else {
+                    confirm.setCustomValidity('');
+                }
+            });
+        }
+
+        if (confirmField) {
+            confirmField.addEventListener('input', function() {
+                const password = document.getElementById('reg-password').value;
+                if (password !== this.value) {
+                    this.setCustomValidity('Passwords do not match');
+                } else {
+                    this.setCustomValidity('');
+                }
+            });
+        }
+
+        if (regForm) {
+            regForm.addEventListener('submit', function(event) {
+                event.preventDefault();
+                
+                let hasErrors = false;
+
+                const name = document.getElementById('reg-name').value.trim();
+                const nameRegex = /^[A-Za-z\s]{2,50}$/;
+                if (!nameRegex.test(name)) {
+                    showError('reg-name', 'Enter valid name (2-50 letters only)');
+                    hasErrors = true;
+                } else {
+                    clearError('reg-name');
+                }
+
+                const email = document.getElementById('reg-email').value.trim();
+                const emailRegex = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
+                if (!emailRegex.test(email)) {
+                    showError('reg-email', 'Enter a valid email address');
+                    hasErrors = true;
+                } else {
+                    clearError('reg-email');
+                }
+
+                const phone = document.getElementById('reg-phone').value.trim();
+                const phoneRegex = /^\+968\s?\d{8}$/;
+                if (!phoneRegex.test(phone)) {
+                    showError('reg-phone', 'Enter valid Omani phone (e.g., +968 71183928)');
+                    hasErrors = true;
+                } else {
+                    clearError('reg-phone');
+                }
+
+                const password = document.getElementById('reg-password').value;
+                const passwordRegex = /^(?=.*[A-Za-z])(?=.*\d)[A-Za-z\d@$!%*#?&]{8,}$/;
+                if (!passwordRegex.test(password)) {
+                    showError('reg-password', 'Password: 8+ chars, 1 letter, 1 number');
+                    hasErrors = true;
+                } else {
+                    clearError('reg-password');
+                }
+
+                const confirm = document.getElementById('reg-confirm').value;
+                if (password !== confirm) {
+                    showError('reg-confirm', 'Passwords do not match');
+                    hasErrors = true;
+                } else {
+                    clearError('reg-confirm');
+                }
+
+                const terms = document.getElementById('terms');
+                if (!terms.checked) {
+                    showError('terms', 'You must agree to Terms & Conditions');
+                    hasErrors = true;
+                } else {
+                    clearError('terms');
+                }
+
+                if (!hasErrors) {
+                    alert('Registration successful! Welcome to Nasagh.');
+                    const formData = {
+                        name: name,
+                        email: email,
+                        phone: phone,
+                        password: password
+                    };
+                    console.log('Registration data:', formData);
+                }
+                
+                return false;
+            });
+        }
+
+        if (loginForm) {
+            loginForm.addEventListener('submit', function(event) {
+                event.preventDefault();
+                
+                let hasErrors = false;
+
+                const email = document.getElementById('login-email').value.trim();
+                const emailRegex = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
+                if (!emailRegex.test(email)) {
+                    showError('login-email', 'Enter a valid email address');
+                    hasErrors = true;
+                } else {
+                    clearError('login-email');
+                }
+
+                const password = document.getElementById('login-password').value.trim();
+                if (!password) {
+                    showError('login-password', 'Enter your password');
+                    hasErrors = true;
+                } else {
+                    clearError('login-password');
+                }
+
+                if (!hasErrors) {
+                    alert('Login successful! Redirecting to your account...');
+                    console.log('Login data:', { email: email, password: password });
+                }
+                
+                return false;
+            });
+        }
+
+        function showError(fieldId, message) {
+            const field = document.getElementById(fieldId);
+            const errorDiv = document.createElement('div');
+            errorDiv.className = 'text-danger small mt-1';
+            errorDiv.textContent = message;
+            
+            const existingError = field.parentNode.querySelector('.text-danger');
+            if (existingError) existingError.remove();
+            
+            field.parentNode.appendChild(errorDiv);
+            field.classList.add('is-invalid');
+        }
+
+        function clearError(fieldId) {
+            const field = document.getElementById(fieldId);
+            const existingError = field.parentNode.querySelector('.text-danger');
+            if (existingError) existingError.remove();
+            field.classList.remove('is-invalid');
+        }
+    });
+</script>
     <!-- JavaScript for Dynamic Order Management -->
     <script>
         // Order Constructor Function
@@ -518,3 +702,5 @@
     </script>
 </body>
 </html>
+
+

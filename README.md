@@ -221,6 +221,18 @@ Choose one of these platforms:
 | **Hisham Alhinai** | Shop page, product details, UI/UX design, responsive layout |
 | **Almuhannad Alhinai** | About page, contact forms, tables design, documentation |
 
+
+## 👨‍💻 Team Contributions part 5
+
+Team Member	Primary Responsibilities	Contributions
+Almuhannad Alhinai	Database Design, PHP Backend Architecture	Created database schema, implemented PDO connections, developed core PHP processing scripts
+Elyas Alquwatie	Frontend Integration, Form Validation	Converted HTML forms to PHP, implemented JavaScript validation, styled result pages
+Hisham Alhinai	Search Functionality, Data Access Pages,
+Testing, Documentation, GitHub Management	Developed search scripts, implemented CRUD operations, created admin interfaces,
+Conducted system testing, created this report, managed version control
+
+
+
 ## 📧 Contact Information
 
 **Email**: s150229@student.squ.edu.om  
